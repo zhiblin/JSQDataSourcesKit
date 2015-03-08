@@ -80,7 +80,6 @@ CollectionViewDataSource.swift
 	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
 	public func performFetch(error: NSErrorPointer = nil) -> Bool
 TitledCollectionReusableView.swift
-	public class TitledCollectionReusableView: UICollectionReusableView
 	public var label: UILabel
 	public var leftSpacing: NSLayoutConstraint
 	public var topSpacing: NSLayoutConstraint
