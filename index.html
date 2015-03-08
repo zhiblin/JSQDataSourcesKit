@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="JSQDataSourcesKit : Type-safe, value-oriented data source objects that keep your view controllers light">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>JSQDataSourcesKit</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jessesquires/JSQDataSourcesKit">View on GitHub</a>
+
+          <h1 id="project_title">JSQDataSourcesKit</h1>
+          <h2 id="project_tagline">Type-safe, value-oriented data source objects that keep your view controllers light</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jessesquires/JSQDataSourcesKit/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jessesquires/JSQDataSourcesKit/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="jsqdatasourceskit" class="anchor" href="#jsqdatasourceskit" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSQDataSourcesKit</h1>
+
+<p><em>Type-safe, value-oriented data source objects that keep your view controllers light</em></p>
+
+<p>A Swift rewrite of <a href="https://github.com/rosettastone/RSTDataSourceKit">RSTDataSourceKit</a> inspired by <a href="https://github.com/andymatuschak">Andy Matuschak's</a> <em>type-safe, value-oriented collection view data source <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist</a></em>. </p>
+
+<blockquote>
+<h4>
+<a id="note-work-in-progress-but-almost-done" class="anchor" href="#note-work-in-progress-but-almost-done" aria-hidden="true"><span class="octicon octicon-link"></span></a>NOTE: work in-progress, but almost done!</h4>
+
+<p>See what's left to do <a href="https://github.com/jessesquires/JSQDataSourcesKit/milestones/Release%201.0.0">here</a></p>
+</blockquote>
+
+<h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>This framework aims to the reduce boilerplate code regarding the <code>UITableView</code>, <code>UICollectionView</code>, and <code>NSFetchedResultsController</code> data source objects, as well as the <code>NSFetchedResultsControllerDelegate</code> object. It helps <a href="http://www.objc.io/issue-1/">keep view controllers light</a>, while focusing on type-safety, <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> design principles, and easy interoperability with Cocoa.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<blockquote>
+<p>TODO</p>
+</blockquote>
+
+<h2>
+<a id="framework-components" class="anchor" href="#framework-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Framework Components</h2>
+
+<h5>
+<a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Sources</h5>
+
+<p><code>CollectionViewDataSourceProvider</code></p>
+
+<p><code>TableViewDataSourceProvider</code></p>
+
+<h5>
+<a id="data-sources-for-nsfetchedresultscontroller" class="anchor" href="#data-sources-for-nsfetchedresultscontroller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Sources for <code>NSFetchedResultsController</code>
+</h5>
+
+<p><code>CollectionViewFetchedResultsDataSourceProvider</code></p>
+
+<p><code>TableViewFetchedResultsDataSourceProvider</code></p>
+
+<h5>
+<a id="delegates-for-nsfetchedresultscontrollerdelegate" class="anchor" href="#delegates-for-nsfetchedresultscontrollerdelegate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delegates for <code>NSFetchedResultsControllerDelegate</code>
+</h5>
+
+<p><code>CollectionViewFetchedResultsDelegateProvider</code></p>
+
+<p><code>TableViewFetchedResultsDelegateProvider</code></p>
+
+<h5>
+<a id="section-objects" class="anchor" href="#section-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Section objects</h5>
+
+<p><code>CollectionViewSection</code></p>
+
+<p><code>TableViewSection</code></p>
+
+<h5>
+<a id="factories" class="anchor" href="#factories" aria-hidden="true"><span class="octicon octicon-link"></span></a>Factories</h5>
+
+<p><code>CollectionViewCellFactory</code></p>
+
+<p><code>CollectionSupplementaryViewFactory</code></p>
+
+<p><code>TitledCollectionReusableViewFactory</code></p>
+
+<p><code>TableViewCellFactory</code></p>
+
+<h5>
+<a id="views" class="anchor" href="#views" aria-hidden="true"><span class="octicon octicon-link"></span></a>Views</h5>
+
+<p><code>TitledCollectionReusableView</code></p>
+
+<p>This is a <code>UICollectionReusableView</code> with a single <code>UILabel</code> intended for use as an analog to <code>tableView(_:titleForHeaderInSection:)</code> when using a <code>CollectionViewFetchedResultsDelegateProvider</code>. These views can be created via a <code>TitledCollectionReusableViewFactory</code>.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<div class="highlight highlight-swift"><pre><span class="pl-k">import</span> <span class="pl-s3">JSQDataSourcesKit</span></pre></div>
+
+<blockquote>
+<p>TODO</p>
+</blockquote>
+
+<h5>
+<a id="demo-project" class="anchor" href="#demo-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo Project</h5>
+
+<p>The example app included exercises <em>all</em> functionality in this framework. Open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>Example</code> scheme, then build and run. </p>
+
+<h2>
+<a id="unit-tests" class="anchor" href="#unit-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit tests</h2>
+
+<p>There's a suite of unit tests for the <code>JSQDataSourcesKit.framework</code>. To run them, open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>JSQDataSourcesKit</code> scheme, then ⌘-u.</p>
+
+<p>These tests are well commented and serve as further documentation for how to use this library.</p>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Please follow these sweet <a href="https://github.com/jessesquires/HowToContribute">contribution guidelines</a>.</p>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>Created and maintained by <a href="https://twitter.com/jesse_squires"><strong>@jesse_squires</strong></a></p>
+
+<ul>
+<li>Inspired by <strong><a href="https://github.com/andymatuschak">andymatuschak</a> /</strong> <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist f1e1691fa1a327468f8e</a>
+</li>
+<li>Inspired by <strong><a href="https://github.com/ashfurrow">ashfurrow</a> /</strong> <a href="https://github.com/ashfurrow/UICollectionView-NSFetchedResultsController">UICollectionView-NSFetchedResultsController</a>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><code>JSQDataSourcesKit</code> is released under an <a href="http://opensource.org/licenses/MIT">MIT License</a>. See <code>LICENSE</code> for details.</p>
+
+<blockquote>
+<p><strong>Copyright © 2015 Jesse Squires.</strong></p>
+</blockquote>
+
+<p><em>Please provide attribution, it is greatly appreciated.</em></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">JSQDataSourcesKit maintained by <a href="https://github.com/jessesquires">jessesquires</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
