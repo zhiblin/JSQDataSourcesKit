@@ -1,0 +1,111 @@
+TableViewDataSource.swift
+	public protocol TableViewCellFactoryType
+	func cellForItem(item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
+	func configureCell(cell: Cell, forItem item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
+	public struct TableViewCellFactory <Cell: UITableViewCell, DataItem>: TableViewCellFactoryType
+	public let reuseIdentifier: String
+	public init(reuseIdentifier: String, cellConfigurator: CellConfigurationHandler)
+	public func cellForItem(item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
+	public func configureCell(cell: Cell, forItem item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
+	public protocol TableViewSectionInfo
+	var dataItems: [DataItem]
+	var headerTitle: String?
+	var footerTitle: String?
+	public struct TableViewSection <DataItem>: TableViewSectionInfo
+	public var dataItems: [DataItem]
+	public let headerTitle: String?
+	public let footerTitle: String?
+	public var count: Int
+	public init(dataItems: [DataItem], headerTitle: String? = nil, footerTitle: String? = nil)
+	public final class TableViewDataSourceProvider <DataItem, SectionInfo: TableViewSectionInfo, CellFactory: TableViewCellFactoryType
+                                                where
+                                                SectionInfo.DataItem == DataItem,
+                                                CellFactory.DataItem == DataItem>
+	public var sections: [SectionInfo]
+	public let cellFactory: CellFactory
+	public var dataSource: UITableViewDataSource
+	public init(sections: [SectionInfo], cellFactory: CellFactory, tableView: UITableView? = nil)
+	public final class TableViewFetchedResultsDataSourceProvider <DataItem, CellFactory: TableViewCellFactoryType
+                                                              where CellFactory.DataItem == DataItem>
+	public let fetchedResultsController: NSFetchedResultsController
+	public let cellFactory: CellFactory
+	public var dataSource: UITableViewDataSource
+	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, tableView: UITableView? = nil)
+	public func performFetch(error: NSErrorPointer = nil) -> Bool
+CollectionViewDataSource.swift
+	public protocol CollectionViewCellFactoryType
+	func cellForItem(item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
+	func configureCell(cell: Cell, forItem item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
+	public struct CollectionViewCellFactory <Cell: UICollectionViewCell, DataItem>: CollectionViewCellFactoryType
+	public let reuseIdentifier: String
+	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
+	public func cellForItem(item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
+	public func configureCell(cell: Cell, forItem item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
+	public protocol CollectionSupplementaryViewFactoryType
+	func supplementaryViewForItem(item: DataItem, kind: SupplementaryViewKind,
+	func configureSupplementaryView(view: SupplementaryView, forItem item: DataItem, kind: SupplementaryViewKind,
+	public struct CollectionSupplementaryViewFactory <SupplementaryView: UICollectionReusableView, DataItem>: CollectionSupplementaryViewFactoryType
+	public let reuseIdentifier: String
+	public init(reuseIdentifier: String, supplementaryViewConfigurator: ConfigurationHandler)
+	public func supplementaryViewForItem(item: DataItem, kind: SupplementaryViewKind,
+                                         inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> SupplementaryView
+	public func configureSupplementaryView(view: SupplementaryView, forItem item: DataItem, kind: SupplementaryViewKind,
+                                           inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> SupplementaryView
+	public protocol CollectionViewSectionInfo
+	var dataItems: [DataItem]
+	public struct CollectionViewSection <DataItem>: CollectionViewSectionInfo
+	public var dataItems: [DataItem]
+	public var count: Int
+	public init(dataItems: [DataItem])
+	public final class CollectionViewDataSourceProvider <DataItem, SectionInfo: CollectionViewSectionInfo,
+                                                     CellFactory: CollectionViewCellFactoryType, SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
+                                                     where
+                                                     SectionInfo.DataItem == DataItem,
+                                                     CellFactory.DataItem == DataItem,
+                                                     SupplementaryViewFactory.DataItem == DataItem>
+	public var sections: [SectionInfo]
+	public let cellFactory: CellFactory
+	public let supplementaryViewFactory: SupplementaryViewFactory?
+	public var dataSource: UICollectionViewDataSource
+	public init(sections: [SectionInfo], cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
+	public final class CollectionViewFetchedResultsDataSourceProvider <DataItem, CellFactory: CollectionViewCellFactoryType,
+                                                                    SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
+                                                                    where
+                                                                    CellFactory.DataItem == DataItem,
+                                                                    SupplementaryViewFactory.DataItem == DataItem>
+	public let fetchedResultsController: NSFetchedResultsController
+	public let cellFactory: CellFactory
+	public let supplementaryViewFactory: SupplementaryViewFactory?
+	public var dataSource: UICollectionViewDataSource
+	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
+	public func performFetch(error: NSErrorPointer = nil) -> Bool
+TitledCollectionReusableView.swift
+	public class TitledCollectionReusableView: UICollectionReusableView
+	public var label: UILabel
+	public var leftSpacing: NSLayoutConstraint
+	public var topSpacing: NSLayoutConstraint
+	public var rightSpacing: NSLayoutConstraint
+	public var bottomSpacing: NSLayoutConstraint
+	public override var backgroundColor: UIColor?
+	public class var identifier: String
+	public class var nib: UINib
+	public override func prepareForReuse()
+	public func configureWithHandler(handler: ConfigurationHandler)
+FetchedResultsDelegate.swift
+	public final class CollectionViewFetchedResultsDelegateProvider <DataItem>
+	public weak var collectionView: UICollectionView?
+	public var delegate: NSFetchedResultsControllerDelegate
+	public init(collectionView: UICollectionView, controller: NSFetchedResultsController? = nil)
+	public final class TableViewFetchedResultsDelegateProvider <DataItem, CellFactory: TableViewCellFactoryType
+                                                            where CellFactory.DataItem == DataItem>
+	public weak var tableView: UITableView?
+	public let cellFactory: CellFactory
+	public var delegate: NSFetchedResultsControllerDelegate
+	public init(tableView: UITableView, cellFactory: CellFactory, controller: NSFetchedResultsController? = nil)
+TitledCollectionReusableViewFactory.swift
+	public struct TitledCollectionReusableViewFactory <DataItem>: CollectionSupplementaryViewFactoryType
+	public init(dataConfigurator: DataConfigurationHandler, styleConfigurator: StyleConfigurationHandler)
+	public func supplementaryViewForItem(item: DataItem, kind: SupplementaryViewKind,
+        inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> TitledCollectionReusableView
+	public func configureSupplementaryView(view: TitledCollectionReusableView, forItem item: DataItem, kind: SupplementaryViewKind,
+        inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> TitledCollectionReusableView
