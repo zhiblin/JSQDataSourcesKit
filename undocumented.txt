@@ -4,7 +4,7 @@ TableViewDataSource.swift
 	func configureCell(cell: Cell, forItem item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
 	public struct TableViewCellFactory <Cell: UITableViewCell, DataItem>: TableViewCellFactoryType
 	public let reuseIdentifier: String
-	public init(reuseIdentifier: String, cellConfigurator: CellConfigurationHandler)
+	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
 	public func cellForItem(item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
 	public func configureCell(cell: Cell, forItem item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
 	public protocol TableViewSectionInfo
@@ -33,24 +33,8 @@ TableViewDataSource.swift
 	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, tableView: UITableView? = nil)
 	public func performFetch(error: NSErrorPointer = nil) -> Bool
 CollectionViewDataSource.swift
-	public protocol CollectionViewCellFactoryType
-	func cellForItem(item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
-	func configureCell(cell: Cell, forItem item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
-	public struct CollectionViewCellFactory <Cell: UICollectionViewCell, DataItem>: CollectionViewCellFactoryType
-	public let reuseIdentifier: String
 	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
-	public func cellForItem(item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
-	public func configureCell(cell: Cell, forItem item: DataItem, inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> Cell
-	public protocol CollectionSupplementaryViewFactoryType
-	func supplementaryViewForItem(item: DataItem, kind: SupplementaryViewKind,
-	func configureSupplementaryView(view: SupplementaryView, forItem item: DataItem, kind: SupplementaryViewKind,
-	public struct CollectionSupplementaryViewFactory <SupplementaryView: UICollectionReusableView, DataItem>: CollectionSupplementaryViewFactoryType
-	public let reuseIdentifier: String
 	public init(reuseIdentifier: String, supplementaryViewConfigurator: ConfigurationHandler)
-	public func supplementaryViewForItem(item: DataItem, kind: SupplementaryViewKind,
-                                         inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> SupplementaryView
-	public func configureSupplementaryView(view: SupplementaryView, forItem item: DataItem, kind: SupplementaryViewKind,
-                                           inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> SupplementaryView
 	public protocol CollectionViewSectionInfo
 	var dataItems: [DataItem]
 	public struct CollectionViewSection <DataItem>: CollectionViewSectionInfo
@@ -79,17 +63,6 @@ CollectionViewDataSource.swift
 	public var dataSource: UICollectionViewDataSource
 	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
 	public func performFetch(error: NSErrorPointer = nil) -> Bool
-TitledCollectionReusableView.swift
-	public var label: UILabel
-	public var leftSpacing: NSLayoutConstraint
-	public var topSpacing: NSLayoutConstraint
-	public var rightSpacing: NSLayoutConstraint
-	public var bottomSpacing: NSLayoutConstraint
-	public override var backgroundColor: UIColor?
-	public class var identifier: String
-	public class var nib: UINib
-	public override func prepareForReuse()
-	public func configureWithHandler(handler: ConfigurationHandler)
 FetchedResultsDelegate.swift
 	public final class CollectionViewFetchedResultsDelegateProvider <DataItem>
 	public weak var collectionView: UICollectionView?
