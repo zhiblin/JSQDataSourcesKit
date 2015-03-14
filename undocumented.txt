@@ -35,11 +35,6 @@ TableViewDataSource.swift
 CollectionViewDataSource.swift
 	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
 	public init(reuseIdentifier: String, supplementaryViewConfigurator: ConfigurationHandler)
-	public protocol CollectionViewSectionInfo
-	var dataItems: [DataItem]
-	public struct CollectionViewSection <DataItem>: CollectionViewSectionInfo
-	public var dataItems: [DataItem]
-	public var count: Int
 	public init(dataItems: [DataItem])
 	public final class CollectionViewDataSourceProvider <DataItem, SectionInfo: CollectionViewSectionInfo,
                                                      CellFactory: CollectionViewCellFactoryType, SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
