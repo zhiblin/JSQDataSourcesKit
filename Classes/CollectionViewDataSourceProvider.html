@@ -24,7 +24,7 @@
     <a title="CollectionViewDataSourceProvider Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p class="header-text"><a href="../index.html">JSQDataSourcesKit Docs</a> (40% documented)</p>
+        <p class="header-text"><a href="../index.html">JSQDataSourcesKit Docs</a> (46% documented)</p>
         <p id="header-links"><a href="https://github.com/jessesquires/JSQDataSourcesKit"><img id="header-icon" src="../img/gh.png" height="16px" width="16px" />View on GitHub</a></p>
       </div>
     </header>
@@ -126,7 +126,7 @@
         <h1 class="chapter-name">CollectionViewDataSourceProvider</h1>
         <section>
           <section class="section">
-            <p class="para">Undocumented</p>
+            <p class="para">A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source for a collection view. An instance of <code>CollectionViewDataSourceProvider</code> owns an array of section instances, a cell factory, and a supplementary view factory. Clients are responsbile for registering cells and supplementary views with the collection view. Clients are also responsible for adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified. Sections may be accessed or replaced via the provider&rsquo;s subscripting interface. <br/><br/> <strong>The data source provider has the following type parameters:</strong> <br/> <code>&lt;DataItem, SectionInfo: CollectionViewSectionInfo, CellFactory: CollectionViewCellFactoryType, SupplementaryViewFactory: CollectionSupplementaryViewFactoryType where SectionInfo.DataItem == DataItem, CellFactory.DataItem == DataItem, SupplementaryViewFactory.DataItem == DataItem&gt;</code></p>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -149,7 +149,16 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">The sections in the collection view.</p>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sections</span><span class="p">:</span> <span class="p">[</span><span class="kt">SectionInfo</span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -167,7 +176,16 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">Returns the cell factory for this data source provider.</p>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cellFactory</span><span class="p">:</span> <span class="kt">CellFactory</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -185,7 +203,16 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">Returns the supplementary view factory for this data source provider, or <code>nil</code> if it does not exist.</p>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">supplementaryViewFactory</span><span class="p">:</span> <span class="kt">SupplementaryViewFactory</span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -203,7 +230,16 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">Returns the object that provides the data for the collection view.</p>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt">UICollectionViewDataSource</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -221,7 +257,76 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">Constructs a new data source provider for a collection view.</p>
+                        <a href="../Classes/CollectionViewDataSourceProvider/init(sections:cellFactory:supplementaryViewFactory:collectionView:).html" class="see-more">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">sections</span><span class="p">:</span> <span class="p">[</span><span class="kt">SectionInfo</span><span class="p">],</span> <span class="nv">cellFactory</span><span class="p">:</span> <span class="kt">CellFactory</span><span class="p">,</span> <span class="nv">supplementaryViewFactory</span><span class="p">:</span> <span class="kt">SupplementaryViewFactory</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="parameters">
+                        <h4>Parameters</h4>
+                        <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+                          <tbody>
+                            <tr>
+                              <td scope="row">
+                                <code>
+                                <em class="term">sections</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div class="definition">
+                                  <p class="para">The sections to display in the collection view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td scope="row">
+                                <code>
+                                <em class="term">cellFactory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div class="definition">
+                                  <p class="para">The cell factory from which the collection view data source will dequeue cells.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td scope="row">
+                                <code>
+                                <em class="term">supplementaryViewFactory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div class="definition">
+                                  <p class="para">The supplementary view factory from which the collection view data source will dequeue supplementary views.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td scope="row">
+                                <code>
+                                <em class="term">collectionView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div class="definition">
+                                  <p class="para">The collection view whose data source will be provided by this provider.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="result-description">
+                        <h4>Return Value</h4>
+                        <p class="para">A new <code>CollectionViewDataSourceProvider</code> instance.</p>
                       </div>
                     </section>
                   </div>

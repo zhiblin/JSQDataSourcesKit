@@ -36,16 +36,6 @@ CollectionViewDataSource.swift
 	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
 	public init(reuseIdentifier: String, supplementaryViewConfigurator: ConfigurationHandler)
 	public init(dataItems: [DataItem])
-	public final class CollectionViewDataSourceProvider <DataItem, SectionInfo: CollectionViewSectionInfo,
-                                                     CellFactory: CollectionViewCellFactoryType, SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
-                                                     where
-                                                     SectionInfo.DataItem == DataItem,
-                                                     CellFactory.DataItem == DataItem,
-                                                     SupplementaryViewFactory.DataItem == DataItem>
-	public var sections: [SectionInfo]
-	public let cellFactory: CellFactory
-	public let supplementaryViewFactory: SupplementaryViewFactory?
-	public var dataSource: UICollectionViewDataSource
 	public init(sections: [SectionInfo], cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
 	public final class CollectionViewFetchedResultsDataSourceProvider <DataItem, CellFactory: CollectionViewCellFactoryType,
                                                                     SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
