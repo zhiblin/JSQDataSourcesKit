@@ -37,32 +37,9 @@ CollectionViewDataSource.swift
 	public init(reuseIdentifier: String, supplementaryViewConfigurator: ConfigurationHandler)
 	public init(dataItems: [DataItem])
 	public init(sections: [SectionInfo], cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
-	public final class CollectionViewFetchedResultsDataSourceProvider <DataItem, CellFactory: CollectionViewCellFactoryType,
-                                                                    SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
-                                                                    where
-                                                                    CellFactory.DataItem == DataItem,
-                                                                    SupplementaryViewFactory.DataItem == DataItem>
-	public let fetchedResultsController: NSFetchedResultsController
-	public let cellFactory: CellFactory
-	public let supplementaryViewFactory: SupplementaryViewFactory?
-	public var dataSource: UICollectionViewDataSource
 	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, supplementaryViewFactory: SupplementaryViewFactory? = nil, collectionView: UICollectionView? = nil)
-	public func performFetch(error: NSErrorPointer = nil) -> Bool
 FetchedResultsDelegate.swift
-	public final class CollectionViewFetchedResultsDelegateProvider <DataItem>
-	public weak var collectionView: UICollectionView?
-	public var delegate: NSFetchedResultsControllerDelegate
 	public init(collectionView: UICollectionView, controller: NSFetchedResultsController? = nil)
-	public final class TableViewFetchedResultsDelegateProvider <DataItem, CellFactory: TableViewCellFactoryType
-                                                            where CellFactory.DataItem == DataItem>
-	public weak var tableView: UITableView?
-	public let cellFactory: CellFactory
-	public var delegate: NSFetchedResultsControllerDelegate
 	public init(tableView: UITableView, cellFactory: CellFactory, controller: NSFetchedResultsController? = nil)
 TitledCollectionReusableViewFactory.swift
-	public struct TitledCollectionReusableViewFactory <DataItem>: CollectionSupplementaryViewFactoryType
 	public init(dataConfigurator: DataConfigurationHandler, styleConfigurator: StyleConfigurationHandler)
-	public func supplementaryViewForItem(item: DataItem, kind: SupplementaryViewKind,
-        inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> TitledCollectionReusableView
-	public func configureSupplementaryView(view: TitledCollectionReusableView, forItem item: DataItem, kind: SupplementaryViewKind,
-        inCollectionView collectionView: UICollectionView, atIndexPath indexPath: NSIndexPath) -> TitledCollectionReusableView
