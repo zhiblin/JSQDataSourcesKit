@@ -1,21 +1,5 @@
 TableViewDataSource.swift
-	public protocol TableViewCellFactoryType
-	func cellForItem(item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
-	func configureCell(cell: Cell, forItem item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
-	public struct TableViewCellFactory <Cell: UITableViewCell, DataItem>: TableViewCellFactoryType
-	public let reuseIdentifier: String
 	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
-	public func cellForItem(item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
-	public func configureCell(cell: Cell, forItem item: DataItem, inTableView tableView: UITableView, atIndexPath indexPath: NSIndexPath) -> Cell
-	public protocol TableViewSectionInfo
-	var dataItems: [DataItem]
-	var headerTitle: String?
-	var footerTitle: String?
-	public struct TableViewSection <DataItem>: TableViewSectionInfo
-	public var dataItems: [DataItem]
-	public let headerTitle: String?
-	public let footerTitle: String?
-	public var count: Int
 	public init(dataItems: [DataItem], headerTitle: String? = nil, footerTitle: String? = nil)
 	public final class TableViewDataSourceProvider <DataItem, SectionInfo: TableViewSectionInfo, CellFactory: TableViewCellFactoryType
                                                 where
