@@ -1,21 +1,8 @@
 TableViewDataSource.swift
 	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
 	public init(dataItems: [DataItem], headerTitle: String? = nil, footerTitle: String? = nil)
-	public final class TableViewDataSourceProvider <DataItem, SectionInfo: TableViewSectionInfo, CellFactory: TableViewCellFactoryType
-                                                where
-                                                SectionInfo.DataItem == DataItem,
-                                                CellFactory.DataItem == DataItem>
-	public var sections: [SectionInfo]
-	public let cellFactory: CellFactory
-	public var dataSource: UITableViewDataSource
 	public init(sections: [SectionInfo], cellFactory: CellFactory, tableView: UITableView? = nil)
-	public final class TableViewFetchedResultsDataSourceProvider <DataItem, CellFactory: TableViewCellFactoryType
-                                                              where CellFactory.DataItem == DataItem>
-	public let fetchedResultsController: NSFetchedResultsController
-	public let cellFactory: CellFactory
-	public var dataSource: UITableViewDataSource
 	public init(fetchedResultsController: NSFetchedResultsController, cellFactory: CellFactory, tableView: UITableView? = nil)
-	public func performFetch(error: NSErrorPointer = nil) -> Bool
 CollectionViewDataSource.swift
 	public init(reuseIdentifier: String, cellConfigurator: ConfigurationHandler)
 	public init(reuseIdentifier: String, supplementaryViewConfigurator: ConfigurationHandler)

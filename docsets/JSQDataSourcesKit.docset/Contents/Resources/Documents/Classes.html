@@ -23,7 +23,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p class="header-text"><a href="index.html">JSQDataSourcesKit Docs</a> (81% documented)</p>
+        <p class="header-text"><a href="index.html">JSQDataSourcesKit Docs</a> (89% documented)</p>
         <p id="header-links"><a href="https://github.com/jessesquires/JSQDataSourcesKit"><img id="header-icon" src="img/gh.png" height="16px" width="16px" />View on GitHub</a></p>
       </div>
     </header>
@@ -148,8 +148,20 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">A <code>TableViewDataSourceProvider</code> is responsible for providing a data source object for a table view. An instance of <code>TableViewDataSourceProvider</code> owns an array of section instances and a cell factory. Clients are responsbile for registering cells with the table view. Clients are also responsible for adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified. Sections may be accessed or replaced via the provider&rsquo;s subscripting interface. <br/><br/> <strong>The data source provider has the following type parameters:</strong> <br/> <code>&lt;DataItem, SectionInfo: TableViewSectionInfo, CellFactory: TableViewCellFactoryType where SectionInfo.DataItem == DataItem, CellFactory.DataItem == DataItem&gt;</code></p>
                         <a href="Classes/TableViewDataSourceProvider.html" class="see-more">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
+                                                <span class="k">where</span>
+                                                <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="p">,</span>
+                                                <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -167,8 +179,18 @@
                     <section class="section instance-method">
                       <div class="pointy-thing"></div>
                       <div class="abstract">
-                        <p class="para">Undocumented</p>
+                        <p class="para">A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view that is backed by an <code>NSFetchedResultsController</code> instance. This provider owns a fetched results controller and a cell factory. Clients are responsbile for registering cells with the table view. <br/><br/> <strong>The data source provider has the following type parameters:</strong> <br/> <code>&lt;DataItem, CellFactory: TableViewCellFactoryType where CellFactory.DataItem == DataItem&gt;</code></p>
                         <a href="Classes/TableViewFetchedResultsDataSourceProvider.html" class="see-more">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
+                                                              <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
