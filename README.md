@@ -6,6 +6,8 @@
 
 ## Setup
 
+The `gh-pages` branch includes `develop` as a [git submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules) in order to generate docs.
+
 ````bash
 $ git clone https://github.com/jessesquires/JSQDataSourcesKit.git
 $ cd JSQDataSourcesKit/
