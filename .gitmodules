@@ -1,0 +1,3 @@
+[submodule "JSQDataSourcesKit"]
+	path = JSQDataSourcesKit
+	url = https://github.com/jessesquires/JSQDataSourcesKit.git
