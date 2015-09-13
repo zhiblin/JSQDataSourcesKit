@@ -110,14 +110,14 @@
         <section>
           <section class="section">
             <h1>TableViewCellFactory</h1>
+              <div class="declaration">
+                <div class="Swift">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span></code></pre>
+
+                </div>
+              </div>
             <p>A <code>TableViewCellFactory</code> is a concrete <code>TableViewCellFactoryType</code>.
-This factory is responsible for producing and configuring table view cells for a specific data item.
-<br/><br/>
-<strong>The factory has the following type parameters:</strong>
-<br/>
-<code>
-&lt;Cell: UITableViewCell, DataItem&gt;
-</code></p>
+This factory is responsible for producing and configuring table view cells for a specific data item.</p>
 
           </section>
           <section class="section task-group-section">
@@ -150,7 +150,7 @@ This factory is responsible for producing and configuring table view cells for a
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Cell</span><span class="p">,</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Cell</span><span class="p">,</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
 
                         </div>
                       </div>
@@ -174,12 +174,12 @@ This factory is responsible for producing and configuring table view cells for a
                             <tr>
                               <td>
                                 <code>
-                                <em>DataItem</em>
+                                <em>Item</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The data item at the index path.</p>
+                                  <p>The item at the index path.</p>
 
                                 </div>
                               </td>
@@ -246,8 +246,7 @@ This factory is responsible for producing and configuring table view cells for a
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A unique identifier that describes the purpose of the cells that the factory produces.
-The factory dequeues cells from the table view with this reuse identifier.
-Clients are responsible for registering a cell for this identifier with the table view.</p>
+The factory dequeues cells from the table view with this reuse identifier.</p>
 
                       </div>
                       <div class="declaration">
@@ -275,9 +274,9 @@ Clients are responsible for registering a cell for this identifier with the tabl
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit20TableViewCellFactorycU___FMGS0_Q_Q0__FT15reuseIdentifierSS16cellConfiguratorFTQ_Q0_CSo11UITableViewCSo11NSIndexPath_Q__GS0_Q_Q0__"></a>
+                    <a name="/s:FV17JSQDataSourcesKit20TableViewCellFactorycu0_Rdq_CSo15UITableViewCell_FMGS0_q_q0__FT15reuseIdentifierSS16cellConfiguratorFTq_q0_CSo11UITableViewCSo11NSIndexPath_q__GS0_q_q0__"></a>
                     <a name="//apple_ref/swift/Method/init(reuseIdentifier:cellConfigurator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit20TableViewCellFactorycU___FMGS0_Q_Q0__FT15reuseIdentifierSS16cellConfiguratorFTQ_Q0_CSo11UITableViewCSo11NSIndexPath_Q__GS0_Q_Q0__">init(reuseIdentifier:cellConfigurator:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit20TableViewCellFactorycu0_Rdq_CSo15UITableViewCell_FMGS0_q_q0__FT15reuseIdentifierSS16cellConfiguratorFTq_q0_CSo11UITableViewCSo11NSIndexPath_q__GS0_q_q0__">init(reuseIdentifier:cellConfigurator:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -351,9 +350,9 @@ Clients are responsible for registering a cell for this identifier with the tabl
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit20TableViewCellFactory11cellForItemU___FGS0_Q_Q0__FTQ0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_Q_"></a>
+                    <a name="/s:FV17JSQDataSourcesKit20TableViewCellFactory11cellForItemu0_Rdq_CSo15UITableViewCell_FGS0_q_q0__FTq0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_q_"></a>
                     <a name="//apple_ref/swift/Method/cellForItem(_:inTableView:atIndexPath:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit20TableViewCellFactory11cellForItemU___FGS0_Q_Q0__FTQ0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_Q_">cellForItem(_:inTableView:atIndexPath:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit20TableViewCellFactory11cellForItemu0_Rdq_CSo15UITableViewCell_FGS0_q_q0__FTq0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_q_">cellForItem(_:inTableView:atIndexPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -368,7 +367,7 @@ Clients are responsible for registering a cell for this identifier with the tabl
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="n">inTableView</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">,</span> <span class="n">inTableView</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
 
                         </div>
                       </div>
@@ -384,7 +383,7 @@ Clients are responsible for registering a cell for this identifier with the tabl
                               </td>
                               <td>
                                 <div>
-                                  <p>The model instance (data object) at <code>indexPath</code>.</p>
+                                  <p>The item (model object) at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -429,9 +428,9 @@ Clients are responsible for registering a cell for this identifier with the tabl
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit20TableViewCellFactory13configureCellU___FGS0_Q_Q0__FTQ_7forItemQ0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_Q_"></a>
+                    <a name="/s:FV17JSQDataSourcesKit20TableViewCellFactory13configureCellu0_Rdq_CSo15UITableViewCell_FGS0_q_q0__FTq_7forItemq0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_q_"></a>
                     <a name="//apple_ref/swift/Method/configureCell(_:forItem:inTableView:atIndexPath:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit20TableViewCellFactory13configureCellU___FGS0_Q_Q0__FTQ_7forItemQ0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_Q_">configureCell(_:forItem:inTableView:atIndexPath:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit20TableViewCellFactory13configureCellu0_Rdq_CSo15UITableViewCell_FGS0_q_q0__FTq_7forItemq0_11inTableViewCSo11UITableView11atIndexPathCSo11NSIndexPath_q_">configureCell(_:forItem:inTableView:atIndexPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -446,7 +445,7 @@ Clients are responsible for registering a cell for this identifier with the tabl
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureCell</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="p">,</span> <span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="n">inTableView</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureCell</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="p">,</span> <span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">,</span> <span class="n">inTableView</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
 
                         </div>
                       </div>
@@ -475,7 +474,7 @@ Clients are responsible for registering a cell for this identifier with the tabl
                               </td>
                               <td>
                                 <div>
-                                  <p>The model instance (data object) at <code>indexPath</code>.</p>
+                                  <p>The item (model object) at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -522,8 +521,8 @@ Clients are responsible for registering a cell for this identifier with the tabl
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

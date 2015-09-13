@@ -115,7 +115,7 @@
 
 <p><em>Type-safe, value-oriented data source objects that keep your view controllers light</em></p>
 
-<p>A Swift framework of data source and delegate objects inspired by <a href="https://github.com/andymatuschak">Andy Matuschak&rsquo;s</a> <em>type-safe, value-oriented collection view data source <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist</a></em>. </p>
+<p>A Swift framework of data source and delegate objects inspired by <a href="https://github.com/andymatuschak">Andy Matuschak&rsquo;s</a> <em>type-safe, value-oriented collection view data source <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist</a></em>.</p>
 <a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
 
 <p>This framework reduces the boilerplate code regarding the <code>UITableView</code>, <code>UICollectionView</code>, and <code>NSFetchedResultsController</code> data source objects, as well as the <code>NSFetchedResultsControllerDelegate</code> object. It helps <a href="http://www.objc.io/issue-1/">keep view controllers light</a>, while focusing on type-safety, <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> design principles, and easy interoperability with Cocoa. Further, it brings a more focused and data-driven perspective to these data sources. If you want to change your view then you change your data and its structure, without needing to update any data source or delegate protocol methods.</p>
@@ -123,14 +123,14 @@
 
 <ul>
 <li>iOS 8</li>
-<li>Swift 1.2</li>
+<li>Swift 2.0</li>
 </ul>
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 <a href='#a_href_http_cocoapods_org_cocoapods_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='a_href_http_cocoapods_org_cocoapods_a'><a href="http://cocoapods.org">CocoaPods</a></h4>
 <pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
 
 <span class="c1"># For latest release in cocoapods</span>
-<span class="n">pod</span> <span class="s1">'JSQDataSourcesKit'</span>  
+<span class="n">pod</span> <span class="s1">'JSQDataSourcesKit'</span>
 
 <span class="c1"># Feeling adventurous? Get the latest on develop</span>
 <span class="n">pod</span> <span class="s1">'JSQDataSourcesKit'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/jessesquires/JSQDataSourcesKit.git'</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">'develop'</span>
@@ -143,7 +143,7 @@
 <ol>
 <li>Clone this repo and add the <code>JSQDataSourcesKit.xcodeproj</code> to your project</li>
 <li>Select your project app target <q>Build Phases</q> tab</li>
-<li>Add the <code>JSQDataSourcesKit.framework</code> to the <q>Link Binary With Libraries</q><br></li>
+<li>Add the <code>JSQDataSourcesKit.framework</code> to the <q>Link Binary With Libraries</q></li>
 <li>Create a new build phase of type <q>Copy Files</q> and set the <q>Destination</q> to <q>Frameworks</q></li>
 <li>Add the <code>JSQDataSourcesKit.framework</code> and check <q>Code Sign On Copy</q></li>
 </ol>
@@ -177,7 +177,7 @@
 <span class="k">let</span> <span class="nv">allSections</span> <span class="o">=</span> <span class="p">[</span><span class="n">section0</span><span class="p">,</span> <span class="n">section1</span><span class="p">]</span>
 
 <span class="c1">// create cell factory, it receives a cell identifier and configuration closure</span>
-<span class="k">let</span> <span class="nv">factory</span> <span class="o">=</span> <span class="kt">TableViewCellFactory</span><span class="p">(</span><span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="s">"MyCellIdentifier"</span><span class="p">)</span> 
+<span class="k">let</span> <span class="nv">factory</span> <span class="o">=</span> <span class="kt">TableViewCellFactory</span><span class="p">(</span><span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="s">"MyCellIdentifier"</span><span class="p">)</span>
     <span class="p">{</span> <span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span> <span class="k">in</span>
       <span class="c1">// configure the cell</span>
       <span class="k">return</span> <span class="n">cell</span>
@@ -193,12 +193,12 @@
 <span class="c1">//</span>
 <span class="c1">// 1. registering cells with the table view (or collection view)</span>
 <span class="c1">//</span>
-<span class="c1">// 2. adding and removing cells as the data source is modified </span>
+<span class="c1">// 2. adding and removing cells as the data source is modified</span>
 <span class="c1">//    (i.e. as self.dataSourceProvider.sections changes)</span>
 </code></pre>
 <a href='#demo_project' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='demo_project'>Demo Project</h5>
 
-<p>The example app included exercises <em>all</em> functionality in this framework. Open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>Example</code> scheme, then build and run. </p>
+<p>The example app included exercises <em>all</em> functionality in this framework. Open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>Example</code> scheme, then build and run.</p>
 <a href='#unit_tests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='unit_tests'>Unit tests</h2>
 
 <p>There&rsquo;s a suite of unit tests for the <code>JSQDataSourcesKit.framework</code>. To run them, open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>JSQDataSourcesKit</code> scheme, then &#x2318;-u.</p>
@@ -229,8 +229,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

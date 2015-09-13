@@ -129,13 +129,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>TableViewCellFactory</code> is a concrete <code>TableViewCellFactoryType</code>.
-This factory is responsible for producing and configuring table view cells for a specific data item.
-<br/><br/>
-<strong>The factory has the following type parameters:</strong>
-<br/>
-<code>
-&lt;Cell: UITableViewCell, DataItem&gt;
-</code></p>
+This factory is responsible for producing and configuring table view cells for a specific data item.</p>
 
                         <a href="Structs/TableViewCellFactory.html" class="slightly-smaller">See more</a>
                       </div>
@@ -143,7 +137,7 @@ This factory is responsible for producing and configuring table view cells for a
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">DataItem</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span></code></pre>
 
                         </div>
                       </div>
@@ -164,14 +158,9 @@ This factory is responsible for producing and configuring table view cells for a
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>TableViewSection</code> is a concrete <code>TableViewSectionInfo</code>.
-A section instance is responsible for managing the elements in a section.
-Elements in the section may be accessed or replaced via its subscripting interface.
-<br/><br/>
-<strong>The section has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem&gt;
-</code></p>
+A section instance is responsible for managing the elements in a section.</p>
+
+<p>Elements in the section may be accessed or replaced via its subscripting interface.</p>
 
                         <a href="Structs/TableViewSection.html" class="slightly-smaller">See more</a>
                       </div>
@@ -179,7 +168,7 @@ Elements in the section may be accessed or replaced via its subscripting interfa
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewSection</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewSection</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span></code></pre>
 
                         </div>
                       </div>
@@ -204,13 +193,7 @@ Elements in the section may be accessed or replaced via its subscripting interfa
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>CollectionViewCellFactory</code> is a concrete <code>CollectionViewCellFactoryType</code>.
-This factory is responsible for producing and configuring collection view cells for a specific data item.
-<br/><br/>
-<strong>The factory has the following type parameters:</strong>
-<br/>
-<code>
-&lt;Cell: UICollectionViewCell, DataItem&gt;
-</code></p>
+This factory is responsible for producing and configuring collection view cells for a specific item.</p>
 
                         <a href="Structs/CollectionViewCellFactory.html" class="slightly-smaller">See more</a>
                       </div>
@@ -218,7 +201,7 @@ This factory is responsible for producing and configuring collection view cells 
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">DataItem</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span></code></pre>
 
                         </div>
                       </div>
@@ -239,13 +222,8 @@ This factory is responsible for producing and configuring collection view cells 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>CollectionSupplementaryViewFactory</code> is a concrete <code>CollectionSupplementaryViewFactoryType</code>.
-This factory is responsible for producing and configuring supplementary views for a collection view for a specific data item.
-<br/><br/>
-<strong>The factory has the following type parameters:</strong>
-<br/>
-<code>
-&lt;SupplementaryView: UICollectionReusableView, DataItem&gt;
-</code></p>
+This factory is responsible for producing and configuring supplementary views for a collection view for a specific item.
+&ldquo;`</p>
 
                         <a href="Structs/CollectionSupplementaryViewFactory.html" class="slightly-smaller">See more</a>
                       </div>
@@ -253,7 +231,7 @@ This factory is responsible for producing and configuring supplementary views fo
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionSupplementaryViewFactory</span> <span class="o">&lt;</span><span class="kt">SupplementaryView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">DataItem</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionSupplementaryViewFactory</span> <span class="o">&lt;</span><span class="kt">SupplementaryView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span></code></pre>
 
                         </div>
                       </div>
@@ -275,13 +253,7 @@ This factory is responsible for producing and configuring supplementary views fo
                       <div class="abstract">
                         <p>A <code>CollectionViewSection</code> is a concrete <code>CollectionViewSectionInfo</code>.
 A section instance is responsible for managing the elements in a section.
-Elements in the section may be accessed or replaced via its subscripting interface.
-<br/><br/>
-<strong>The section has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem&gt;
-</code></p>
+Elements in the section may be accessed or replaced via its subscripting interface.</p>
 
                         <a href="Structs/CollectionViewSection.html" class="slightly-smaller">See more</a>
                       </div>
@@ -289,7 +261,7 @@ Elements in the section may be accessed or replaced via its subscripting interfa
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewSection</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewSection</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span></code></pre>
 
                         </div>
                       </div>
@@ -313,14 +285,10 @@ Elements in the section may be accessed or replaced via its subscripting interfa
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>TitledCollectionReusableViewFactory</code> is specialized supplementary view factory that conforms to <code>CollectionSupplementaryViewFactoryType</code>.
-This factory is responsible for producing and configuring <code>TitledCollectionReusableView</code> instances.
-<br/><br/>
-<strong>The factory has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem&gt;
-</code></p>
+                        <p>A <code>TitledCollectionReusableViewFactory</code> is specialized supplementary view factory
+that conforms to <code>CollectionSupplementaryViewFactoryType</code>.</p>
+
+<p>This factory is responsible for producing and configuring <code>TitledCollectionReusableView</code> instances.</p>
 
                         <a href="Structs/TitledCollectionReusableViewFactory.html" class="slightly-smaller">See more</a>
                       </div>
@@ -328,7 +296,7 @@ This factory is responsible for producing and configuring <code>TitledCollection
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TitledCollectionReusableViewFactory</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TitledCollectionReusableViewFactory</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span></code></pre>
 
                         </div>
                       </div>
@@ -340,8 +308,8 @@ This factory is responsible for producing and configuring <code>TitledCollection
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

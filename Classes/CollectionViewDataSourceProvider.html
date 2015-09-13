@@ -110,21 +110,23 @@
         <section>
           <section class="section">
             <h1>CollectionViewDataSourceProvider</h1>
+              <div class="declaration">
+                <div class="Swift">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                                                    <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
+                                                    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
+                                                    <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
+                                                    <span class="k">where</span>
+                                                    <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span>
+                                                    <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span>
+                                                    <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
             <p>A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source object for a collection view.
-An instance of <code>CollectionViewDataSourceProvider</code> owns an array of section instances, a cell factory, and a supplementary view factory.
-Clients are responsbile for registering cells and supplementary views with the collection view.
-Clients are also responsible for adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.
-Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.
-<br/><br/>
-<strong>The data source provider has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem, SectionInfo: CollectionViewSectionInfo, CellFactory: CollectionViewCellFactoryType, SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
-where
-SectionInfo.DataItem == DataItem,
-CellFactory.DataItem == DataItem,
-SupplementaryViewFactory.DataItem == DataItem&gt;
-</code></p>
+An instance of <code>CollectionViewDataSourceProvider</code> owns an array of section instances, a cell factory, and a supplementary view factory.</p>
+
+<p>Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.</p>
 
           </section>
           <section class="section task-group-section">
@@ -140,9 +142,111 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider8sectionsGSaQ0__"></a>
+                    <a name="/s:sC17JSQDataSourcesKit32CollectionViewDataSourceProvider9subscriptFCSo11NSIndexPathq_"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:sC17JSQDataSourcesKit32CollectionViewDataSourceProvider9subscriptFCSo11NSIndexPathq_">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span> <span class="p">(</span><span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Item</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path of the item to return.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The item at <code>indexPath</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:sC17JSQDataSourcesKit32CollectionViewDataSourceProvider9subscriptFSiq0_"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:sC17JSQDataSourcesKit32CollectionViewDataSourceProvider9subscriptFSiq0_">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span> <span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SectionInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the section to return.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The section at <code>index</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider8sectionsGSaq0__"></a>
                     <a name="//apple_ref/swift/Property/sections" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider8sectionsGSaQ0__">sections</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider8sectionsGSaq0__">sections</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -167,9 +271,9 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider11cellFactoryQ1_"></a>
+                    <a name="/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider11cellFactoryq1_"></a>
                     <a name="//apple_ref/swift/Property/cellFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider11cellFactoryQ1_">cellFactory</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider11cellFactoryq1_">cellFactory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,9 +298,9 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider24supplementaryViewFactoryGSqQ2__"></a>
+                    <a name="/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider24supplementaryViewFactoryGSqq2__"></a>
                     <a name="//apple_ref/swift/Property/supplementaryViewFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider24supplementaryViewFactoryGSqQ2__">supplementaryViewFactory</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit32CollectionViewDataSourceProvider24supplementaryViewFactoryGSqq2__">supplementaryViewFactory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -259,9 +363,9 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC17JSQDataSourcesKit32CollectionViewDataSourceProvidercU_S_25CollectionViewSectionInfo_S_29CollectionViewCellFactoryType_S_38CollectionSupplementaryViewFactoryType_U___FMGS0_Q_Q0_Q1_Q2__FT8sectionsGSaQ0__11cellFactoryQ1_24supplementaryViewFactoryGSqQ2__14collectionViewGSqCSo16UICollectionView__GS0_Q_Q0_Q1_Q2__"></a>
+                    <a name="/s:FC17JSQDataSourcesKit32CollectionViewDataSourceProvidercu2_Rq0_S_25CollectionViewSectionInfoq1_S_29CollectionViewCellFactoryTypeq2_S_38CollectionSupplementaryViewFactoryTypezq_qq2_S3_4Itemzqq0_S1_4Itemqq2_S3_4Itemzqq1_S2_4Itemqq2_S3_4Item_FMGS0_q_q0_q1_q2__FT8sectionsGSaq0__11cellFactoryq1_24supplementaryViewFactoryGSqq2__14collectionViewGSqCSo16UICollectionView__GS0_q_q0_q1_q2__"></a>
                     <a name="//apple_ref/swift/Method/init(sections:cellFactory:supplementaryViewFactory:collectionView:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC17JSQDataSourcesKit32CollectionViewDataSourceProvidercU_S_25CollectionViewSectionInfo_S_29CollectionViewCellFactoryType_S_38CollectionSupplementaryViewFactoryType_U___FMGS0_Q_Q0_Q1_Q2__FT8sectionsGSaQ0__11cellFactoryQ1_24supplementaryViewFactoryGSqQ2__14collectionViewGSqCSo16UICollectionView__GS0_Q_Q0_Q1_Q2__">init(sections:cellFactory:supplementaryViewFactory:collectionView:)</a>
+                    <a class="token" href="#/s:FC17JSQDataSourcesKit32CollectionViewDataSourceProvidercu2_Rq0_S_25CollectionViewSectionInfoq1_S_29CollectionViewCellFactoryTypeq2_S_38CollectionSupplementaryViewFactoryTypezq_qq2_S3_4Itemzqq0_S1_4Itemqq2_S3_4Itemzqq1_S2_4Itemqq2_S3_4Item_FMGS0_q_q0_q1_q2__FT8sectionsGSaq0__11cellFactoryq1_24supplementaryViewFactoryGSqq2__14collectionViewGSqCSo16UICollectionView__GS0_q_q0_q1_q2__">init(sections:cellFactory:supplementaryViewFactory:collectionView:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,8 +456,8 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

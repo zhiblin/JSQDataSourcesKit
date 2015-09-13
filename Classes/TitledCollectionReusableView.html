@@ -110,28 +110,35 @@
         <section>
           <section class="section">
             <h1>TitledCollectionReusableView</h1>
-            <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code> intended for use as an
-analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
-when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.
-These views can be created via a <code>TitledCollectionReusableViewFactory</code>.</p>
+              <div class="declaration">
+                <div class="Swift">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TitledCollectionReusableView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code>
+intended for use as an analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
+when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
+
+<p>These views can be created via a <code>TitledCollectionReusableViewFactory</code>.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
                 <div class="task-name-container">
-                  <a name="/Properties"></a>
-                  <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
-                  <a href="#/Properties">
-                    <h3 class="section-name">Properties</h3>
+                  <a name="/Outlets"></a>
+                  <a name="//apple_ref/swift/Section/Outlets" class="dashAnchor"></a>
+                  <a href="#/Outlets">
+                    <h3 class="section-name">Outlets</h3>
                   </a>
                 </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView5labelCSo7UILabel"></a>
+                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView5labelXwGSQCSo7UILabel_"></a>
                     <a name="//apple_ref/swift/Property/label" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView5labelCSo7UILabel">label</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView5labelXwGSQCSo7UILabel_">label</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -139,14 +146,14 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the label of the reusable view.</p>
+                        <p>The label of the reusable view.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">UILabel</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -156,9 +163,9 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView14leadingSpacingCSo18NSLayoutConstraint"></a>
+                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView14leadingSpacingXwGSQCSo18NSLayoutConstraint_"></a>
                     <a name="//apple_ref/swift/Property/leadingSpacing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView14leadingSpacingCSo18NSLayoutConstraint">leadingSpacing</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView14leadingSpacingXwGSQCSo18NSLayoutConstraint_">leadingSpacing</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -166,14 +173,14 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the leading spacing constraint between the label and its superview.</p>
+                        <p>The leading spacing constraint between the label and its superview.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">leadingSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">leadingSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -183,9 +190,9 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView10topSpacingCSo18NSLayoutConstraint"></a>
+                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView10topSpacingXwGSQCSo18NSLayoutConstraint_"></a>
                     <a name="//apple_ref/swift/Property/topSpacing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView10topSpacingCSo18NSLayoutConstraint">topSpacing</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView10topSpacingXwGSQCSo18NSLayoutConstraint_">topSpacing</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,14 +200,14 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the top spacing constraint between the label and its superview.</p>
+                        <p>The top spacing constraint between the label and its superview.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">topSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">topSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -210,9 +217,9 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView15trailingSpacingCSo18NSLayoutConstraint"></a>
+                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView15trailingSpacingXwGSQCSo18NSLayoutConstraint_"></a>
                     <a name="//apple_ref/swift/Property/trailingSpacing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView15trailingSpacingCSo18NSLayoutConstraint">trailingSpacing</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView15trailingSpacingXwGSQCSo18NSLayoutConstraint_">trailingSpacing</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,14 +227,14 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the trailing constraint between the label and its superview.</p>
+                        <p>The trailing constraint between the label and its superview.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">trailingSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">trailingSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -237,9 +244,9 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView13bottomSpacingCSo18NSLayoutConstraint"></a>
+                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView13bottomSpacingXwGSQCSo18NSLayoutConstraint_"></a>
                     <a name="//apple_ref/swift/Property/bottomSpacing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView13bottomSpacingCSo18NSLayoutConstraint">bottomSpacing</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView13bottomSpacingXwGSQCSo18NSLayoutConstraint_">bottomSpacing</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,14 +254,14 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the bottom spacing constraint between the label and its superview.</p>
+                        <p>The bottom spacing constraint between the label and its superview.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bottomSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">bottomSpacing</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -274,7 +281,8 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The view’s background color. Note: setting this property also sets the background color for <code>label</code>.</p>
+                        <p>The view’s background color.
+- Note: setting this property also sets the background color for <code>label</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -312,7 +320,7 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the default string used to identify instances of <code>TitledCollectionReusableView</code>.</p>
+                        <p>The default string used to identify instances of <code>TitledCollectionReusableView</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -339,7 +347,7 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the <code>UINib</code> object initialized for the view.</p>
+                        <p>The <code>UINib</code> object initialized for the view.</p>
 
                       </div>
                       <div class="declaration">
@@ -355,49 +363,11 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                 </li>
               </ul>
             </div>
-            <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Methods"></a>
-                  <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
-                  <a href="#/Methods">
-                    <h3 class="section-name">Methods</h3>
-                  </a>
-                </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC17JSQDataSourcesKit28TitledCollectionReusableView15prepareForReuseFS0_FT_T_"></a>
-                    <a name="//apple_ref/swift/Method/prepareForReuse()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC17JSQDataSourcesKit28TitledCollectionReusableView15prepareForReuseFS0_FT_T_">prepareForReuse()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Performs any clean up necessary to prepare the view for use again.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareForReuse</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

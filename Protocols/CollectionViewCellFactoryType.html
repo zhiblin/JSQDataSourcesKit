@@ -110,11 +110,14 @@
         <section>
           <section class="section">
             <h1>CollectionViewCellFactoryType</h1>
+              <div class="declaration">
+                <div class="Swift">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">CollectionViewCellFactoryType</span></code></pre>
+
+                </div>
+              </div>
             <p>An instance conforming to <code>CollectionViewCellFactoryType</code> is responsible for initializing
-and configuring collection view cells to be consumed by an instance of <code>CollectionViewDataSourceProvider</code>.
-The <code>CollectionViewCellFactoryType</code> protocol has two associated types, <code>DataItem</code> and <code>Cell</code>.
-These associated types describe the type of model instances backing the collection view
-and the type of cells in the collection view, respectively.</p>
+and configuring collection view cells to be consumed by an instance of <code>CollectionViewDataSourceProvider</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -127,33 +130,6 @@ and the type of cells in the collection view, respectively.</p>
                   </a>
                 </div>
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P17JSQDataSourcesKit29CollectionViewCellFactoryType8DataItem"></a>
-                    <a name="//apple_ref/swift/Alias/DataItem" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P17JSQDataSourcesKit29CollectionViewCellFactoryType8DataItem">DataItem</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The type of elements backing the collection view.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">DataItem</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -181,6 +157,33 @@ and the type of cells in the collection view, respectively.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P17JSQDataSourcesKit29CollectionViewCellFactoryType4Item"></a>
+                    <a name="//apple_ref/swift/Alias/Item" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P17JSQDataSourcesKit29CollectionViewCellFactoryType4Item">Item</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of elements (model objects) backing the collection view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">Item</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -195,9 +198,9 @@ and the type of cells in the collection view, respectively.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType11cellForItemUS0__U___FQPS0_FTQS1_8DataItem16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_QS1_4Cell"></a>
+                    <a name="/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType11cellForItemuRq_S0__Fq_FTqq_S0_4Item16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_qq_S0_4Cell"></a>
                     <a name="//apple_ref/swift/Method/cellForItem(_:inCollectionView:atIndexPath:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType11cellForItemUS0__U___FQPS0_FTQS1_8DataItem16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_QS1_4Cell">cellForItem(_:inCollectionView:atIndexPath:)</a>
+                    <a class="token" href="#/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType11cellForItemuRq_S0__Fq_FTqq_S0_4Item16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_qq_S0_4Cell">cellForItem(_:inCollectionView:atIndexPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,7 +215,7 @@ and the type of cells in the collection view, respectively.</p>
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">,</span> <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
 
                         </div>
                       </div>
@@ -228,7 +231,7 @@ and the type of cells in the collection view, respectively.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The model instance (data object) at <code>indexPath</code>.</p>
+                                  <p>The item (model object) at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -273,9 +276,9 @@ and the type of cells in the collection view, respectively.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType13configureCellUS0__U___FQPS0_FTQS1_4Cell7forItemQS1_8DataItem16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_S2_"></a>
+                    <a name="/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType13configureCelluRq_S0__Fq_FTqq_S0_4Cell7forItemqq_S0_4Item16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_qq_S0_4Cell"></a>
                     <a name="//apple_ref/swift/Method/configureCell(_:forItem:inCollectionView:atIndexPath:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType13configureCellUS0__U___FQPS0_FTQS1_4Cell7forItemQS1_8DataItem16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_S2_">configureCell(_:forItem:inCollectionView:atIndexPath:)</a>
+                    <a class="token" href="#/s:FP17JSQDataSourcesKit29CollectionViewCellFactoryType13configureCelluRq_S0__Fq_FTqq_S0_4Cell7forItemqq_S0_4Item16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_qq_S0_4Cell">configureCell(_:forItem:inCollectionView:atIndexPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,7 +293,7 @@ and the type of cells in the collection view, respectively.</p>
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">configureCell</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="p">,</span> <span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">configureCell</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="p">,</span> <span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">,</span> <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
 
                         </div>
                       </div>
@@ -319,7 +322,7 @@ and the type of cells in the collection view, respectively.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The model instance (data object) at <code>indexPath</code>.</p>
+                                  <p>The item (model object) at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -366,8 +369,8 @@ and the type of cells in the collection view, respectively.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -129,19 +129,9 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>TableViewDataSourceProvider</code> is responsible for providing a data source object for a table view.
-An instance of <code>TableViewDataSourceProvider</code> owns an array of section instances and a cell factory.
-Clients are responsbile for registering cells with the table view.
-Clients are also responsible for adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.
-Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.
-<br/><br/>
-<strong>The data source provider has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem, SectionInfo: TableViewSectionInfo, CellFactory: TableViewCellFactoryType
-where
-SectionInfo.DataItem == DataItem,
-CellFactory.DataItem == DataItem&gt;
-</code></p>
+An instance of <code>TableViewDataSourceProvider</code> owns an array of section instances and a cell factory.</p>
+
+<p>Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.</p>
 
                         <a href="Classes/TableViewDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -149,10 +139,12 @@ CellFactory.DataItem == DataItem&gt;
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                                                <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span>
+                                                <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
                                                 <span class="k">where</span>
-                                                <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="p">,</span>
-                                                <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+                                                <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span>
+                                                <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -173,16 +165,9 @@ CellFactory.DataItem == DataItem&gt;
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view
-that is backed by an <code>NSFetchedResultsController</code> instance.
-This provider owns a fetched results controller and a cell factory.
-Clients are responsbile for registering cells with the table view.
-<br/><br/>
-<strong>The data source provider has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem, CellFactory: TableViewCellFactoryType
-where CellFactory.DataItem == DataItem&gt;
-</code></p>
+that is backed by an <code>NSFetchedResultsController</code> instance.</p>
+
+<p>This provider owns a fetched results controller and a cell factory.</p>
 
                         <a href="Classes/TableViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -190,8 +175,46 @@ where CellFactory.DataItem == DataItem&gt;
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-                                                              <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                                                              <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
+                                                              <span class="k">where</span>
+                                                              <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C17JSQDataSourcesKit28TitledCollectionReusableView"></a>
+                    <a name="//apple_ref/swift/Class/TitledCollectionReusableView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17JSQDataSourcesKit28TitledCollectionReusableView">TitledCollectionReusableView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code>
+intended for use as an analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
+when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
+
+<p>These views can be created via a <code>TitledCollectionReusableViewFactory</code>.</p>
+
+                        <a href="Classes/TitledCollectionReusableView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TitledCollectionReusableView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
 
                         </div>
                       </div>
@@ -216,20 +239,9 @@ where CellFactory.DataItem == DataItem&gt;
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source object for a collection view.
-An instance of <code>CollectionViewDataSourceProvider</code> owns an array of section instances, a cell factory, and a supplementary view factory.
-Clients are responsbile for registering cells and supplementary views with the collection view.
-Clients are also responsible for adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.
-Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.
-<br/><br/>
-<strong>The data source provider has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem, SectionInfo: CollectionViewSectionInfo, CellFactory: CollectionViewCellFactoryType, SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
-where
-SectionInfo.DataItem == DataItem,
-CellFactory.DataItem == DataItem,
-SupplementaryViewFactory.DataItem == DataItem&gt;
-</code></p>
+An instance of <code>CollectionViewDataSourceProvider</code> owns an array of section instances, a cell factory, and a supplementary view factory.</p>
+
+<p>Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.</p>
 
                         <a href="Classes/CollectionViewDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -237,12 +249,14 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
-                                                     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span> <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
-                                                     <span class="k">where</span>
-                                                     <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="p">,</span>
-                                                     <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="p">,</span>
-                                                     <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                                                    <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
+                                                    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
+                                                    <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
+                                                    <span class="k">where</span>
+                                                    <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span>
+                                                    <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span>
+                                                    <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -263,19 +277,9 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>CollectionViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a collection view
-that is backed by an <code>NSFetchedResultsController</code> instance. 
-This provider owns a fetched results controller, a cell factory, and a supplementary view factory.
-Clients are responsbile for registering cells and supplementary views with the collection view.
-<br/><br/>
-<strong>The data source provider has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem, CellFactory: CollectionViewCellFactoryType,
-SupplementaryViewFactory: CollectionSupplementaryViewFactoryType
-where
-CellFactory.DataItem == DataItem,
-SupplementaryViewFactory.DataItem == DataItem&gt;
-</code></p>
+that is backed by an <code>NSFetchedResultsController</code> instance.</p>
+
+<p>This provider owns a fetched results controller, a cell factory, and a supplementary view factory.</p>
 
                         <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -283,46 +287,12 @@ SupplementaryViewFactory.DataItem == DataItem&gt;
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                                                                    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
                                                                     <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
                                                                     <span class="k">where</span>
-                                                                    <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="p">,</span>
-                                                                    <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C17JSQDataSourcesKit28TitledCollectionReusableView"></a>
-                    <a name="//apple_ref/swift/Class/TitledCollectionReusableView" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit28TitledCollectionReusableView">TitledCollectionReusableView</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code> intended for use as an
-analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
-when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.
-These views can be created via a <code>TitledCollectionReusableViewFactory</code>.</p>
-
-                        <a href="Classes/TitledCollectionReusableView.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TitledCollectionReusableView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
+                                                                    <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span>
+                                                                    <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -347,16 +317,9 @@ These views can be created via a <code>TitledCollectionReusableViewFactory</code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>CollectionViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
-for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.
-<br/><br/>
-<strong>The delegate provider has the following type parameters:</strong>
-<br/>
-<code>
-&lt;DataItem&gt;
-</code>
-<br/>
-Here, the <code>DataItem</code> type parameter acts as a phatom type.
-This type should correpsond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.</p>
+
+<p>Here, the <code>Item</code> type parameter acts as a phatom type.</p>
 
                         <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -364,7 +327,7 @@ This type should correpsond to the type of objects that the <code>NSFetchedResul
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -385,14 +348,7 @@ This type should correpsond to the type of objects that the <code>NSFetchedResul
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>TableViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
-for an instance of <code>NSFetchedResultsController</code> that manages data to display in a table view.
-<br/><br/>
-<strong>The delegate provider has the following type parameters:</strong>
-<br/>
-<code>
-DataItem, CellFactory: TableViewCellFactoryType
-where CellFactory.DataItem == DataItem&gt;
-</code></p>
+for an instance of <code>NSFetchedResultsController</code> that manages data to display in a table view.</p>
 
                         <a href="Classes/TableViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -400,8 +356,9 @@ where CellFactory.DataItem == DataItem&gt;
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">DataItem</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-                                                            <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">DataItem</span> <span class="o">==</span> <span class="kt">DataItem</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                                                            <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
+                                                            <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -413,8 +370,8 @@ where CellFactory.DataItem == DataItem&gt;
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

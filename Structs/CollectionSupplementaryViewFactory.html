@@ -110,14 +110,15 @@
         <section>
           <section class="section">
             <h1>CollectionSupplementaryViewFactory</h1>
+              <div class="declaration">
+                <div class="Swift">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionSupplementaryViewFactory</span> <span class="o">&lt;</span><span class="kt">SupplementaryView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span></code></pre>
+
+                </div>
+              </div>
             <p>A <code>CollectionSupplementaryViewFactory</code> is a concrete <code>CollectionSupplementaryViewFactoryType</code>.
-This factory is responsible for producing and configuring supplementary views for a collection view for a specific data item.
-<br/><br/>
-<strong>The factory has the following type parameters:</strong>
-<br/>
-<code>
-&lt;SupplementaryView: UICollectionReusableView, DataItem&gt;
-</code></p>
+This factory is responsible for producing and configuring supplementary views for a collection view for a specific item.
+&ldquo;`</p>
 
           </section>
           <section class="section task-group-section">
@@ -150,7 +151,7 @@ This factory is responsible for producing and configuring supplementary views fo
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">SupplementaryView</span><span class="p">,</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">SupplementaryView</span><span class="p">,</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
 
                         </div>
                       </div>
@@ -174,12 +175,12 @@ This factory is responsible for producing and configuring supplementary views fo
                             <tr>
                               <td>
                                 <code>
-                                <em>DataItem</em>
+                                <em>Item</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The data item at the index path.</p>
+                                  <p>The item at the index path.</p>
 
                                 </div>
                               </td>
@@ -259,8 +260,7 @@ This factory is responsible for producing and configuring supplementary views fo
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A unique identifier that describes the purpose of the supplementary views that the factory produces.
-The factory dequeues supplementary views from the collection view with this reuse identifier.
-Clients are responsible for registering a view for this identifier and a supplementary view kind with the collection view.</p>
+The factory dequeues supplementary views from the collection view with this reuse identifier.</p>
 
                       </div>
                       <div class="declaration">
@@ -288,9 +288,9 @@ Clients are responsible for registering a view for this identifier and a supplem
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycU___FMGS0_Q_Q0__FT15reuseIdentifierSS29supplementaryViewConfiguratorFTQ_Q0_SSCSo16UICollectionViewCSo11NSIndexPath_Q__GS0_Q_Q0__"></a>
+                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycu0_Rdq_CSo24UICollectionReusableView_FMGS0_q_q0__FT15reuseIdentifierSS29supplementaryViewConfiguratorFTq_q0_SSCSo16UICollectionViewCSo11NSIndexPath_q__GS0_q_q0__"></a>
                     <a name="//apple_ref/swift/Method/init(reuseIdentifier:supplementaryViewConfigurator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycU___FMGS0_Q_Q0__FT15reuseIdentifierSS29supplementaryViewConfiguratorFTQ_Q0_SSCSo16UICollectionViewCSo11NSIndexPath_Q__GS0_Q_Q0__">init(reuseIdentifier:supplementaryViewConfigurator:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycu0_Rdq_CSo24UICollectionReusableView_FMGS0_q_q0__FT15reuseIdentifierSS29supplementaryViewConfiguratorFTq_q0_SSCSo16UICollectionViewCSo11NSIndexPath_q__GS0_q_q0__">init(reuseIdentifier:supplementaryViewConfigurator:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -364,9 +364,9 @@ Clients are responsible for registering a view for this identifier and a supplem
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory24supplementaryViewForItemU___FGS0_Q_Q0__FTQ0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_Q_"></a>
+                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory24supplementaryViewForItemu0_Rdq_CSo24UICollectionReusableView_FGS0_q_q0__FTq0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_q_"></a>
                     <a name="//apple_ref/swift/Method/supplementaryViewForItem(_:kind:inCollectionView:atIndexPath:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory24supplementaryViewForItemU___FGS0_Q_Q0__FTQ0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_Q_">supplementaryViewForItem(_:kind:inCollectionView:atIndexPath:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory24supplementaryViewForItemu0_Rdq_CSo24UICollectionReusableView_FGS0_q_q0__FTq0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_q_">supplementaryViewForItem(_:kind:inCollectionView:atIndexPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -381,8 +381,8 @@ Clients are responsible for registering a view for this identifier and a supplem
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">supplementaryViewForItem</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span>
-                                         <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">supplementaryViewForItem</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">,</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span>
+        <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
 
                         </div>
                       </div>
@@ -398,7 +398,7 @@ Clients are responsible for registering a view for this identifier and a supplem
                               </td>
                               <td>
                                 <div>
-                                  <p>The model instance (data object) at <code>indexPath</code>.</p>
+                                  <p>The item (model object) at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -456,9 +456,9 @@ Clients are responsible for registering a view for this identifier and a supplem
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory26configureSupplementaryViewU___FGS0_Q_Q0__FTQ_7forItemQ0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_Q_"></a>
+                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory26configureSupplementaryViewu0_Rdq_CSo24UICollectionReusableView_FGS0_q_q0__FTq_7forItemq0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_q_"></a>
                     <a name="//apple_ref/swift/Method/configureSupplementaryView(_:forItem:kind:inCollectionView:atIndexPath:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory26configureSupplementaryViewU___FGS0_Q_Q0__FTQ_7forItemQ0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_Q_">configureSupplementaryView(_:forItem:kind:inCollectionView:atIndexPath:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactory26configureSupplementaryViewu0_Rdq_CSo24UICollectionReusableView_FGS0_q_q0__FTq_7forItemq0_4kindSS16inCollectionViewCSo16UICollectionView11atIndexPathCSo11NSIndexPath_q_">configureSupplementaryView(_:forItem:kind:inCollectionView:atIndexPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -473,8 +473,8 @@ Clients are responsible for registering a view for this identifier and a supplem
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureSupplementaryView</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">SupplementaryView</span><span class="p">,</span> <span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">DataItem</span><span class="p">,</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span>
-                                           <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureSupplementaryView</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">SupplementaryView</span><span class="p">,</span> <span class="n">forItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">,</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span>
+        <span class="n">inCollectionView</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">atIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
 
                         </div>
                       </div>
@@ -503,7 +503,7 @@ Clients are responsible for registering a view for this identifier and a supplem
                               </td>
                               <td>
                                 <div>
-                                  <p>The model instance (data object) at <code>indexPath</code>.</p>
+                                  <p>The item (model object) at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -563,8 +563,8 @@ Clients are responsible for registering a view for this identifier and a supplem
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-05-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
