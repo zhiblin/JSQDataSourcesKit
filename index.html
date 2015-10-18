@@ -169,11 +169,11 @@
 
 <span class="c1">// register cells</span>
 <span class="k">let</span> <span class="nv">nib</span> <span class="o">=</span> <span class="kt">UINib</span><span class="p">(</span><span class="nv">nibName</span><span class="p">:</span> <span class="s">"MyCellNib"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-<span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">registerNib</span><span class="p">(</span><span class="n">nib</span><span class="p">,</span> <span class="nv">forCellReuseIdentifier</span><span class="p">:</span> <span class="s">"MyCellIdentifier"</span><span class="p">)</span>
+<span class="n">tableView</span><span class="o">.</span><span class="nf">registerNib</span><span class="p">(</span><span class="n">nib</span><span class="p">,</span> <span class="nv">forCellReuseIdentifier</span><span class="p">:</span> <span class="s">"MyCellIdentifier"</span><span class="p">)</span>
 
 <span class="c1">// create sections with your model objects</span>
-<span class="k">let</span> <span class="nv">section0</span> <span class="o">=</span> <span class="kt">TableViewSection</span><span class="p">(</span><span class="nv">dataItems</span><span class="p">:</span> <span class="p">[</span> <span class="cm">/* array of type T */</span> <span class="p">])</span>
-<span class="k">let</span> <span class="nv">section1</span> <span class="o">=</span> <span class="kt">TableViewSection</span><span class="p">(</span><span class="nv">dataItems</span><span class="p">:</span> <span class="p">[</span> <span class="cm">/* array of type T */</span> <span class="p">])</span>
+<span class="k">let</span> <span class="nv">section0</span> <span class="o">=</span> <span class="kt">TableViewSection</span><span class="p">(</span><span class="nv">items</span><span class="p">:</span> <span class="cm">/* items of type T */</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">section1</span> <span class="o">=</span> <span class="kt">TableViewSection</span><span class="p">(</span><span class="nv">items</span><span class="p">:</span> <span class="cm">/* items of type T */</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">allSections</span> <span class="o">=</span> <span class="p">[</span><span class="n">section0</span><span class="p">,</span> <span class="n">section1</span><span class="p">]</span>
 
 <span class="c1">// create cell factory, it receives a cell identifier and configuration closure</span>
@@ -184,17 +184,14 @@
 <span class="p">}</span>
 
 <span class="c1">// create data source provider</span>
-<span class="k">self</span><span class="o">.</span><span class="n">dataSourceProvider</span> <span class="o">=</span> <span class="kt">TableViewDataSourceProvider</span><span class="p">(</span><span class="nv">sections</span><span class="p">:</span> <span class="n">allSections</span><span class="p">,</span> <span class="nv">cellFactory</span><span class="p">:</span> <span class="n">factory</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">dataSourceProvider</span> <span class="o">=</span> <span class="kt">TableViewDataSourceProvider</span><span class="p">(</span><span class="nv">sections</span><span class="p">:</span> <span class="n">allSections</span><span class="p">,</span> <span class="nv">cellFactory</span><span class="p">:</span> <span class="n">factory</span><span class="p">)</span>
 
 <span class="c1">// set the table view's data source</span>
-<span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">dataSourceProvider</span><span class="o">.</span><span class="n">dataSource</span>
+<span class="n">tableView</span><span class="o">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">dataSourceProvider</span><span class="o">.</span><span class="n">dataSource</span>
 
 <span class="c1">// Clients are responsible for the following:</span>
-<span class="c1">//</span>
-<span class="c1">// 1. registering cells with the table view (or collection view)</span>
-<span class="c1">//</span>
-<span class="c1">// 2. adding and removing cells as the data source is modified</span>
-<span class="c1">//    (i.e. as self.dataSourceProvider.sections changes)</span>
+<span class="c1">//   - registering cells with the table view (or collection view)</span>
+<span class="c1">//   - adding and removing cells as the data source is modified</span>
 </code></pre>
 <a href='#demo_project' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='demo_project'>Demo Project</h5>
 
@@ -209,12 +206,11 @@
 <p>Please follow these sweet <a href="https://github.com/jessesquires/HowToContribute">contribution guidelines</a>.</p>
 <a href='#credits' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='credits'>Credits</h2>
 
-<p>Created and maintained by <a href="https://twitter.com/jesse_squires"><strong>@jesse_squires</strong></a></p>
+<p>Created and maintained by <a href="https://twitter.com/jesse_squires"><strong>@jesse_squires</strong></a>.</p>
 
 <ul>
 <li>Inspired by <strong><a href="https://github.com/andymatuschak">andymatuschak</a> /</strong> <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist f1e1691fa1a327468f8e</a></li>
 <li>Inspired by <strong><a href="https://github.com/ashfurrow">ashfurrow</a> /</strong> <a href="https://github.com/ashfurrow/UICollectionView-NSFetchedResultsController">UICollectionView-NSFetchedResultsController</a></li>
-<li>Derived from my work on <a href="https://github.com/rosettastone/RSTDataSourceKit">RSTDataSourceKit</a></li>
 </ul>
 <a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
