@@ -129,9 +129,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>TableViewDataSourceProvider</code> is responsible for providing a data source object for a table view.
-An instance of <code>TableViewDataSourceProvider</code> owns an array of section instances and a cell factory.</p>
-
-<p>Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.</p>
+Sections may be accessed or modified via the provider&rsquo;s subscripting interface.</p>
 
 <ul>
 <li>Registering cells with the table view</li>
@@ -171,15 +169,14 @@ An instance of <code>TableViewDataSourceProvider</code> owns an array of section
                         <p>A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view
 that is backed by an <code>NSFetchedResultsController</code> instance.</p>
 
-<p>This provider owns a fetched results controller and a cell factory.</p>
-
                         <a href="Classes/TableViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span>
+    <span class="kt">Item</span><span class="p">,</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
     <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
@@ -242,9 +239,7 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source object for a collection view.
-An instance of <code>CollectionViewDataSourceProvider</code> owns an array of section instances, a cell factory, and a supplementary view factory.</p>
-
-<p>Sections may be accessed or replaced via the provider&rsquo;s subscripting interface.</p>
+Sections may be accessed or modified via the provider&rsquo;s subscripting interface.</p>
 
 <ul>
 <li>Registering cells with the collection view</li>
@@ -287,8 +282,6 @@ An instance of <code>CollectionViewDataSourceProvider</code> owns an array of se
                         <p>A <code>CollectionViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a collection view
 that is backed by an <code>NSFetchedResultsController</code> instance.</p>
 
-<p>This provider owns a fetched results controller, a cell factory, and a supplementary view factory.</p>
-
                         <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -326,15 +319,16 @@ that is backed by an <code>NSFetchedResultsController</code> instance.</p>
                         <p>A <code>CollectionViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
 for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.</p>
 
-<p>Here, the <code>Item</code> type parameter acts as a phatom type.</p>
-
                         <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span>
+    <span class="kt">Item</span><span class="p">,</span>
+    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span>
+    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

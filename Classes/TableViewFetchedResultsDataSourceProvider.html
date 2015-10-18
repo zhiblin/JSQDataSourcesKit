@@ -112,7 +112,8 @@
             <h1>TableViewFetchedResultsDataSourceProvider</h1>
               <div class="declaration">
                 <div class="Swift">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span>
+    <span class="kt">Item</span><span class="p">,</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
     <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
@@ -120,8 +121,6 @@
               </div>
             <p>A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view
 that is backed by an <code>NSFetchedResultsController</code> instance.</p>
-
-<p>This provider owns a fetched results controller and a cell factory.</p>
 
           </section>
           <section class="section task-group-section">

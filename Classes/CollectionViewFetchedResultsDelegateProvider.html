@@ -112,14 +112,15 @@
             <h1>CollectionViewFetchedResultsDelegateProvider</h1>
               <div class="declaration">
                 <div class="Swift">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span>
+    <span class="kt">Item</span><span class="p">,</span>
+    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span>
+    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
             <p>A <code>CollectionViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
 for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.</p>
-
-<p>Here, the <code>Item</code> type parameter acts as a phatom type.</p>
 
           </section>
           <section class="section task-group-section">
@@ -154,6 +155,33 @@ for which this provider provides a delegate.</p>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvider11cellFactoryq0_"></a>
+                    <a name="//apple_ref/swift/Property/cellFactory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvider11cellFactoryq0_">cellFactory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the cell factory for this delegate provider.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cellFactory</span><span class="p">:</span> <span class="kt">CellFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -201,9 +229,9 @@ for which this provider provides a delegate.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvidercurFMGS0_q__FT14collectionViewCSo16UICollectionView10controllerGSqCSo26NSFetchedResultsController__GS0_q__"></a>
-                    <a name="//apple_ref/swift/Method/init(collectionView:controller:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvidercurFMGS0_q__FT14collectionViewCSo16UICollectionView10controllerGSqCSo26NSFetchedResultsController__GS0_q__">init(collectionView:controller:)</a>
+                    <a name="/s:FC17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvidercu0_Rq0_S_29CollectionViewCellFactoryTypezq_qq0_S1_4Item_FMGS0_q_q0__FT14collectionViewCSo16UICollectionView11cellFactoryq0_10controllerGSqCSo26NSFetchedResultsController__GS0_q_q0__"></a>
+                    <a name="//apple_ref/swift/Method/init(collectionView:cellFactory:controller:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvidercu0_Rq0_S_29CollectionViewCellFactoryTypezq_qq0_S1_4Item_FMGS0_q_q0__FT14collectionViewCSo16UICollectionView11cellFactoryq0_10controllerGSqCSo26NSFetchedResultsController__GS0_q_q0__">init(collectionView:cellFactory:controller:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -218,7 +246,10 @@ for which this provider provides a delegate.</p>
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">NSFetchedResultsController</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span>
+        <span class="nv">cellFactory</span><span class="p">:</span> <span class="kt">CellFactory</span><span class="p">,</span>
+        <span class="nv">controller</span><span class="p">:</span> <span class="kt">NSFetchedResultsController</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -235,6 +266,19 @@ for which this provider provides a delegate.</p>
                               <td>
                                 <div>
                                   <p>The collection view to be updated when the fetched results change.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cellFactory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The cell factory from which the fetched results controller delegate will configure cells.</p>
 
                                 </div>
                               </td>
