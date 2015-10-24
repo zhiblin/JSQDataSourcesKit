@@ -144,10 +144,9 @@
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">Item</span><span class="p">,</span>
     <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-    <span class="k">where</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -170,16 +169,15 @@
                         <p>A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view
 that is backed by an <code>NSFetchedResultsController</code> instance.</p>
 
+<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+
                         <a href="Classes/TableViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">Item</span><span class="p">,</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -257,11 +255,10 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">Item</span><span class="p">,</span>
     <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
     <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
-    <span class="k">where</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -281,8 +278,10 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>CollectionViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a collection view
-that is backed by an <code>NSFetchedResultsController</code> instance.</p>
+                        <p>A <code>CollectionViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object
+for a collection view that is backed by an <code>NSFetchedResultsController</code> instance.</p>
+
+<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
 
                         <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -291,10 +290,9 @@ that is backed by an <code>NSFetchedResultsController</code> instance.</p>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">Item</span><span class="p">,</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
     <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -321,7 +319,7 @@ that is backed by an <code>NSFetchedResultsController</code> instance.</p>
                         <p>A <code>CollectionViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
 for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.</p>
 
-<p>The <code>Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
 
                         <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -329,10 +327,7 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span>
-    <span class="kt">Item</span><span class="p">,</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -355,7 +350,7 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
                         <p>A <code>TableViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
 for an instance of <code>NSFetchedResultsController</code> that manages data to display in a table view.</p>
 
-<p>The <code>Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
 
                         <a href="Classes/TableViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -363,10 +358,7 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span>
-    <span class="kt">Item</span><span class="p">,</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -378,8 +370,8 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-10-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-10-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
