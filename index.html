@@ -111,14 +111,14 @@
             
             <a href='#jsqdatasourceskit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='jsqdatasourceskit'>JSQDataSourcesKit</h1>
 
-<p><a href="http://travis-ci.org/jessesquires/JSQDataSourcesKit"><img src="https://secure.travis-ci.org/jessesquires/JSQDataSourcesKit.svg" alt="Build Status"></a> <a href="https://cocoapods.org/pods/JSQDataSourcesKit"><img src="https://img.shields.io/cocoapods/v/JSQDataSourcesKit.svg" alt="Version Status"></a> <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/cocoapods/l/JSQDataSourcesKit.svg" alt="license MIT"></a> <a href="http://codecov.io/github/jessesquires/JSQDataSourcesKit"><img src="https://img.shields.io/codecov/c/github/jessesquires/JSQDataSourcesKit.svg" alt="codecov.io"></a> <a href="http://www.jessesquires.com/JSQDataSourcesKit"><img src="https://img.shields.io/cocoapods/p/JSQDataSourcesKit.svg" alt="Platform"></a> <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a> </p>
+<p><a href="http://travis-ci.org/jessesquires/JSQDataSourcesKit"><img src="https://secure.travis-ci.org/jessesquires/JSQDataSourcesKit.svg" alt="Build Status"></a> <a href="https://cocoapods.org/pods/JSQDataSourcesKit"><img src="https://img.shields.io/cocoapods/v/JSQDataSourcesKit.svg" alt="Version Status"></a> <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/cocoapods/l/JSQDataSourcesKit.svg" alt="license MIT"></a> <a href="http://codecov.io/github/jessesquires/JSQDataSourcesKit"><img src="https://img.shields.io/codecov/c/github/jessesquires/JSQDataSourcesKit.svg" alt="codecov.io"></a> <a href="http://www.jessesquires.com/JSQDataSourcesKit"><img src="https://img.shields.io/cocoapods/p/JSQDataSourcesKit.svg" alt="Platform"></a> <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
 
 <p><em>Type-safe, value-oriented, composable data source objects that keep your view controllers light</em></p>
 
-<p>A Swift framework of data source and delegate objects inspired by <a href="https://github.com/andymatuschak">Andy Matuschak&rsquo;s</a> <em>type-safe, value-oriented collection view data source <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist</a></em>.</p>
+<p>A Swift library of data source and delegate objects inspired by <a href="https://github.com/andymatuschak">Andy Matuschak&rsquo;s</a> <em>type-safe, value-oriented collection view data source <a href="https://gist.github.com/andymatuschak/f1e1691fa1a327468f8e">gist</a></em>.</p>
 <a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
 
-<p>This framework reduces the boilerplate code regarding the <code>UITableView</code>, <code>UICollectionView</code>, and <code>NSFetchedResultsController</code> data source objects, as well as the <code>NSFetchedResultsControllerDelegate</code> object. It helps <a href="http://www.objc.io/issue-1/">keep view controllers light</a>, while focusing on type-safety, <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> design principles, and easy interoperability with Cocoa. Further, it brings a more focused and data-driven perspective to these data sources. If you want to change your view then you change your data and its structure, without needing to update any data source or delegate protocol methods.</p>
+<p>This library reduces the boilerplate code regarding the <code>UITableView</code>, <code>UICollectionView</code>, and <code>NSFetchedResultsController</code> data source objects, as well as the <code>NSFetchedResultsControllerDelegate</code> object. It helps <a href="http://www.objc.io/issue-1/">keep view controllers light</a>, while focusing on type-safety, <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> design principles, and easy interoperability with Cocoa. Further, it brings a more focused and data-driven perspective to these data sources. If you want to change your view then you change your data and its structure, without needing to update any data source or delegate protocol methods.</p>
 <a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
 
 <ul>
@@ -161,7 +161,7 @@
 </code></pre>
 <a href='#design' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='design'>Design</h4>
 
-<p>This framework is composed of different data source and delegate <code>Provider</code> classes. Instances of a <code>Provider</code> own a collection of model objects and a cell factory, and are responsible for <em>providing</em> a data source or delegate.</p>
+<p>This library is composed of different data source and delegate <code>Provider</code> classes. Instances of a <code>Provider</code> own a collection of model objects and a cell factory, and are responsible for <em>providing</em> a data source or delegate.</p>
 <a href='#example' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='example'>Example</h4>
 
 <p>The following illustrates a simple example of how these components interact for a table view. Using a collection view follows similarly.</p>
@@ -190,7 +190,7 @@
 </code></pre>
 <a href='#demo_project' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='demo_project'>Demo Project</h4>
 
-<p>The example app included exercises <em>all</em> functionality in this framework. Open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>Example</code> scheme, then build and run.</p>
+<p>The example app included exercises <em>all</em> functionality in this library. Open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>Example</code> scheme, then build and run.</p>
 <a href='#unit_tests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='unit_tests'>Unit tests</h2>
 
 <p>There&rsquo;s a suite of unit tests for the <code>JSQDataSourcesKit.framework</code>. To run them, open <code>JSQDataSourcesKit.xcworkspace</code>, select the <code>JSQDataSourcesKit</code> scheme, then &#x2318;-u.</p>
@@ -220,7 +220,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-10-24)</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-11-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
