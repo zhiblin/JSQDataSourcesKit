@@ -6,7 +6,8 @@
 
 git submodule update --remote
 
-jazzy --swift-version 2.1 -o ./ --source-directory JSQDataSourcesKit/JSQDataSourcesKit/ \
+jazzy --swift-version 2.1 -o ./ \
+      --source-directory JSQDataSourcesKit/JSQDataSourcesKit/ \
       --readme JSQDataSourcesKit/README.md \
       -a 'Jesse Squires' \
       -u 'https://twitter.com/jesse_squires' \
