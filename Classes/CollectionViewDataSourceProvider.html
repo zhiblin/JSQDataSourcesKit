@@ -28,7 +28,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-          <a href="../Classes.html">Classes</a>
+            <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/CollectionViewDataSourceProvider.html">CollectionViewDataSourceProvider</a>
@@ -54,7 +54,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Protocols.html">Protocols</a>
+            <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
@@ -74,7 +74,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Structs.html">Structs</a>
+            <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
@@ -97,7 +97,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Typealiases.html">Typealiases</a>
+            <a href="../Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
@@ -111,7 +111,7 @@
           <section class="section">
             <h1>CollectionViewDataSourceProvider</h1>
               <div class="declaration">
-                <div class="Swift">
+                <div class="language">
                   <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span>
     <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
@@ -122,7 +122,9 @@
               </div>
             <p>A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source object for a collection view.</p>
 
-<p><strong>Clients are responsbile for the follwing:</strong></p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          <strong>Clients are responsbile for the follwing:</strong>
 
 <ul>
 <li>Registering cells with the collection view</li>
@@ -131,17 +133,46 @@
 <li>Adding, removing, or reloading sections as the provider&rsquo;s <code>sections</code> are modified</li>
 </ul>
 
+        </div>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Typealiases"></a>
-                  <a name="//apple_ref/swift/Section/Typealiases" class="dashAnchor"></a>
-                  <a href="#/Typealiases">
-                    <h3 class="section-name">Typealiases</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Typealiases"></a>
+                <a name="//apple_ref/swift/Section/Typealiases" class="dashAnchor"></a>
+                <a href="#/Typealiases">
+                  <h3 class="section-name">Typealiases</h3>
+                </a>
+              </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C17JSQDataSourcesKit32CollectionViewDataSourceProvider4Item"></a>
+                    <a name="//apple_ref/swift/Alias/Item" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17JSQDataSourcesKit32CollectionViewDataSourceProvider4Item">Item</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of elements for the data source provider.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Item</span> <span class="o">=</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -159,7 +190,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span> <span class="p">(</span><span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Item</span></code></pre>
 
@@ -196,33 +227,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C17JSQDataSourcesKit32CollectionViewDataSourceProvider4Item"></a>
-                    <a name="//apple_ref/swift/Alias/Item" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit32CollectionViewDataSourceProvider4Item">Item</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The type of elements for the data source provider.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Item</span> <span class="o">=</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:sC17JSQDataSourcesKit32CollectionViewDataSourceProvider9subscriptFSiq_"></a>
                     <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:sC17JSQDataSourcesKit32CollectionViewDataSourceProvider9subscriptFSiq_">subscript(_:)</a>
@@ -237,7 +241,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span> <span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SectionInfo</span></code></pre>
 
@@ -274,13 +278,13 @@
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Properties"></a>
-                  <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
-                  <a href="#/Properties">
-                    <h3 class="section-name">Properties</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -300,7 +304,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sections</span><span class="p">:</span> <span class="p">[</span><span class="kt">SectionInfo</span><span class="p">]</span></code></pre>
 
@@ -327,7 +331,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cellFactory</span><span class="p">:</span> <span class="kt">CellFactory</span></code></pre>
 
@@ -354,7 +358,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">supplementaryViewFactory</span><span class="p">:</span> <span class="kt">SupplementaryViewFactory</span><span class="p">?</span></code></pre>
 
@@ -381,7 +385,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt">UICollectionViewDataSource</span> <span class="p">{</span> <span class="k">return</span> <span class="n">bridgedDataSource</span> <span class="p">}</span></code></pre>
 
@@ -393,13 +397,13 @@
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Initialization"></a>
-                  <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
-                  <a href="#/Initialization">
-                    <h3 class="section-name">Initialization</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -419,7 +423,7 @@
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
         <span class="nv">sections</span><span class="p">:</span> <span class="p">[</span><span class="kt">SectionInfo</span><span class="p">],</span>
@@ -490,7 +494,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A new <code>CollectionViewDataSourceProvider</code> instance.</p>
+                        <p>A new <code><a href="../Classes/CollectionViewDataSourceProvider.html">CollectionViewDataSourceProvider</a></code> instance.</p>
 
                       </div>
                     </section>
@@ -502,7 +506,7 @@
         </section>
         <section id="footer">
           <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-11-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

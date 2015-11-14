@@ -27,7 +27,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-          <a href="Classes.html">Classes</a>
+            <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/CollectionViewDataSourceProvider.html">CollectionViewDataSourceProvider</a>
@@ -53,7 +53,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="Protocols.html">Protocols</a>
+            <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
@@ -73,7 +73,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="Structs.html">Structs</a>
+            <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
@@ -96,7 +96,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="Typealiases.html">Typealiases</a>
+            <a href="Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
@@ -130,18 +130,22 @@
                       <div class="abstract">
                         <p>A <code>TableViewDataSourceProvider</code> is responsible for providing a data source object for a table view.</p>
 
-<p><strong>Clients are responsbile for the following:</strong></p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          <strong>Clients are responsbile for the following:</strong>
 
 <ul>
 <li>Registering cells with the table view</li>
 <li>Adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.</li>
 </ul>
 
+        </div>
+
                         <a href="Classes/TableViewDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span>
     <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span>
@@ -169,13 +173,21 @@
                         <p>A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view
 that is backed by an <code>NSFetchedResultsController</code> instance.</p>
 
-<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
+
+        </div><div class="aside aside-note">
+          <p class="aside-title">Note</p>
+          Clients are responsbile for registering cells with the table view.
+
+        </div>
 
                         <a href="Classes/TableViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
@@ -203,15 +215,15 @@ that is backed by an <code>NSFetchedResultsController</code> instance.</p>
                       <div class="abstract">
                         <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code>
 intended for use as an analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
-when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
+when using a <code><a href="Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a></code>.</p>
 
-<p>These views can be created via a <code>TitledCollectionReusableViewFactory</code>.</p>
+<p>These views can be created via a <code><a href="Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a></code>.</p>
 
                         <a href="Classes/TitledCollectionReusableView.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TitledCollectionReusableView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
 
@@ -239,7 +251,9 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                       <div class="abstract">
                         <p>A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source object for a collection view.</p>
 
-<p><strong>Clients are responsbile for the follwing:</strong></p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          <strong>Clients are responsbile for the follwing:</strong>
 
 <ul>
 <li>Registering cells with the collection view</li>
@@ -248,11 +262,13 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
 <li>Adding, removing, or reloading sections as the provider&rsquo;s <code>sections</code> are modified</li>
 </ul>
 
+        </div>
+
                         <a href="Classes/CollectionViewDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span>
     <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
@@ -281,13 +297,21 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                         <p>A <code>CollectionViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object
 for a collection view that is backed by an <code>NSFetchedResultsController</code> instance.</p>
 
-<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
+
+        </div><div class="aside aside-note">
+          <p class="aside-title">Note</p>
+          Clients are responsbile for registering cells and supplementary views with the collection view.
+
+        </div>
 
                         <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span>
     <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
@@ -319,13 +343,17 @@ for a collection view that is backed by an <code>NSFetchedResultsController</cod
                         <p>A <code>CollectionViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
 for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.</p>
 
-<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
+
+        </div>
 
                         <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
@@ -350,13 +378,17 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
                         <p>A <code>TableViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
 for an instance of <code>NSFetchedResultsController</code> that manages data to display in a table view.</p>
 
-<p>The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
+
+        </div>
 
                         <a href="Classes/TableViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
@@ -371,7 +403,7 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
         </section>
         <section id="footer">
           <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-11-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
