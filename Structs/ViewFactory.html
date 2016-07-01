@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CollectionViewCellFactory Struct Reference</title>
+    <title>ViewFactory Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/CollectionViewCellFactory" class="dashAnchor"></a>
-    <a title="CollectionViewCellFactory Struct Reference"></a>
+    <a name="//apple_ref/swift/Struct/ViewFactory" class="dashAnchor"></a>
+    <a title="ViewFactory Struct Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">JSQDataSourcesKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">JSQDataSourcesKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CollectionViewCellFactory Struct Reference
+        ViewFactory Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -32,25 +32,24 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/CollectionViewDataSourceProvider.html">CollectionViewDataSourceProvider</a>
+                <a href="../Classes/DataSourceProvider.html">DataSourceProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CollectionViewFetchedResultsDataSourceProvider.html">CollectionViewFetchedResultsDataSourceProvider</a>
+                <a href="../Classes/FetchedResultsController.html">FetchedResultsController</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a>
+                <a href="../Classes/FetchedResultsDelegateProvider.html">FetchedResultsDelegateProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TableViewDataSourceProvider.html">TableViewDataSourceProvider</a>
+                <a href="../Classes/TitledSupplementaryView.html">TitledSupplementaryView</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/TableViewFetchedResultsDataSourceProvider.html">TableViewFetchedResultsDataSourceProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/TableViewFetchedResultsDelegateProvider.html">TableViewFetchedResultsDelegateProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/TitledCollectionReusableView.html">TitledCollectionReusableView</a>
+                <a href="../Enums/ReusableViewType.html">ReusableViewType</a>
               </li>
             </ul>
           </li>
@@ -58,16 +57,13 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/CellFactoryProtocol.html">CellFactoryProtocol</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/CellParentViewProtocol.html">CellParentViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
+                <a href="../Protocols/DataSourceProtocol.html">DataSourceProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a>
+                <a href="../Protocols/ReusableViewFactoryProtocol.html">ReusableViewFactoryProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ReusableViewProtocol.html">ReusableViewProtocol</a>
@@ -81,27 +77,16 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/CellFactory.html">CellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a>
+                <a href="../Structs/DataSource.html">DataSource</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
+                <a href="../Structs/TitledSupplementaryViewFactory.html">TitledSupplementaryViewFactory</a>
               </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
+                <a href="../Structs/ViewFactory.html">ViewFactory</a>
               </li>
             </ul>
           </li>
@@ -110,33 +95,34 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CollectionViewCellFactory</h1>
+            <h1>ViewFactory</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ViewFactory</span><span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">ReusableViewProtocol</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ReusableViewFactoryProtocol</span></code></pre>
 
                 </div>
               </div>
-            <p>A <code>CollectionViewCellFactory</code> is a concrete <code><a href="../Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a></code>.
-This factory is responsible for producing and configuring collection view cells for a specific item.</p>
+            <p>A <code>ViewFactory</code> is a concrete <code><a href="../Protocols/ReusableViewFactoryProtocol.html">ReusableViewFactoryProtocol</a></code> type.
+This factory is responsible for producing and configuring reusable views for a specific item.
+Cells can be for either collection views or table views.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Typealiases"></a>
-                <a name="//apple_ref/swift/Section/Typealiases" class="dashAnchor"></a>
-                <a href="#/Typealiases">
-                  <h3 class="section-name">Typealiases</h3>
+                <a name="/Type%20aliases"></a>
+                <a name="//apple_ref/swift/Section/Type aliases" class="dashAnchor"></a>
+                <a href="#/Type%20aliases">
+                  <h3 class="section-name">Type aliases</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V17JSQDataSourcesKit25CollectionViewCellFactory20ConfigurationHandler"></a>
-                    <a name="//apple_ref/swift/Alias/ConfigurationHandler" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit25CollectionViewCellFactory20ConfigurationHandler">ConfigurationHandler</a>
+                    <a name="/s:V17JSQDataSourcesKit11ViewFactory16ViewConfigurator"></a>
+                    <a name="//apple_ref/swift/Alias/ViewConfigurator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V17JSQDataSourcesKit11ViewFactory16ViewConfigurator">ViewConfigurator</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,14 +130,14 @@ This factory is responsible for producing and configuring collection view cells 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Configures the cell for the specified data item, collection view and index path.</p>
+                        <p>Configures the cell for the specified item, parent view, and index path.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Cell</span><span class="p">,</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ViewConfigurator</span> <span class="o">=</span> <span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="p">,</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">Item</span><span class="p">?,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ReusableViewType</span><span class="p">,</span> <span class="nv">parentView</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="kt">ParentView</span><span class="p">,</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span></code></pre>
 
                         </div>
                       </div>
@@ -162,7 +148,7 @@ This factory is responsible for producing and configuring collection view cells 
                             <tr>
                               <td>
                                 <code>
-                                <em>Cell</em>
+                                <em>cell</em>
                                 </code>
                               </td>
                               <td>
@@ -175,12 +161,12 @@ This factory is responsible for producing and configuring collection view cells 
                             <tr>
                               <td>
                                 <code>
-                                <em>Item</em>
+                                <em>item</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The item at the index path.</p>
+                                  <p>The item at <code>indexPath</code>.</p>
 
                                 </div>
                               </td>
@@ -188,12 +174,12 @@ This factory is responsible for producing and configuring collection view cells 
                             <tr>
                               <td>
                                 <code>
-                                <em>UICollectionView</em>
+                                <em>type</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The collection view requesting this information.</p>
+                                  <p>The type of reusable view.</p>
 
                                 </div>
                               </td>
@@ -201,7 +187,20 @@ This factory is responsible for producing and configuring collection view cells 
                             <tr>
                               <td>
                                 <code>
-                                <em>NSIndexPath</em>
+                                <em>parentView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collection view or table view requesting this information.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
                                 </code>
                               </td>
                               <td>
@@ -236,9 +235,9 @@ This factory is responsible for producing and configuring collection view cells 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV17JSQDataSourcesKit25CollectionViewCellFactory15reuseIdentifierSS"></a>
+                    <a name="/s:vV17JSQDataSourcesKit11ViewFactory15reuseIdentifierSS"></a>
                     <a name="//apple_ref/swift/Property/reuseIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV17JSQDataSourcesKit25CollectionViewCellFactory15reuseIdentifierSS">reuseIdentifier</a>
+                    <a class="token" href="#/s:vV17JSQDataSourcesKit11ViewFactory15reuseIdentifierSS">reuseIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,11 +246,11 @@ This factory is responsible for producing and configuring collection view cells 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A unique identifier that describes the purpose of the cells that the factory produces.
-The factory dequeues cells from the collection view with this reuse identifier.</p>
+The factory dequeues cells from the collection view or table view with this reuse identifier.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    Clients are responsible for registering a cell for this identifier with the collection view.
+    Clients are responsible for registering a cell for this identifier with the collection view or table view.
 
 </div>
 
@@ -261,6 +260,60 @@ The factory dequeues cells from the collection view with this reuse identifier.<
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV17JSQDataSourcesKit11ViewFactory4typeOS_16ReusableViewType"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV17JSQDataSourcesKit11ViewFactory4typeOS_16ReusableViewType">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of the reusable view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ReusableViewType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV17JSQDataSourcesKit11ViewFactory16viewConfiguratorFT4cellq_4itemGSqx_4typeOS_16ReusableViewType10parentVieww_10ParentView9indexPathCSo11NSIndexPath_q_"></a>
+                    <a name="//apple_ref/swift/Property/viewConfigurator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV17JSQDataSourcesKit11ViewFactory16viewConfiguratorFT4cellq_4itemGSqx_4typeOS_16ReusableViewType10parentVieww_10ParentView9indexPathCSo11NSIndexPath_q_">viewConfigurator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A closure used to configure the views.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">viewConfigurator</span><span class="p">:</span> <span class="kt">ViewConfigurator</span></code></pre>
 
                         </div>
                       </div>
@@ -281,9 +334,9 @@ The factory dequeues cells from the collection view with this reuse identifier.<
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit25CollectionViewCellFactorycFT15reuseIdentifierSS16cellConfiguratorFTxq_CSo16UICollectionViewCSo11NSIndexPath_x_GS0_xq__"></a>
-                    <a name="//apple_ref/swift/Method/init(reuseIdentifier:cellConfigurator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit25CollectionViewCellFactorycFT15reuseIdentifierSS16cellConfiguratorFTxq_CSo16UICollectionViewCSo11NSIndexPath_x_GS0_xq__">init(reuseIdentifier:cellConfigurator:)</a>
+                    <a name="/s:FV17JSQDataSourcesKit11ViewFactorycFT15reuseIdentifierSS4typeOS_16ReusableViewType16viewConfiguratorFT4cellq_4itemGSqx_4typeS1_10parentVieww_10ParentView9indexPathCSo11NSIndexPath_q__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/init(reuseIdentifier:type:viewConfigurator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit11ViewFactorycFT15reuseIdentifierSS4typeOS_16ReusableViewType16viewConfiguratorFT4cellq_4itemGSqx_4typeS1_10parentVieww_10ParentView9indexPathCSo11NSIndexPath_q__GS0_xq__">init(reuseIdentifier:type:viewConfigurator:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -291,14 +344,14 @@ The factory dequeues cells from the collection view with this reuse identifier.<
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Constructs a new collection view cell factory.</p>
+                        <p>Constructs a new cell factory.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">cellConfigurator</span><span class="p">:</span> <span class="kt">ConfigurationHandler</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ReusableViewType</span> <span class="o">=</span> <span class="o">.</span><span class="n">cell</span><span class="p">,</span> <span class="nv">viewConfigurator</span><span class="p">:</span> <span class="kt">ViewConfigurator</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -322,7 +375,20 @@ The factory dequeues cells from the collection view with this reuse identifier.<
                             <tr>
                               <td>
                                 <code>
-                                <em>cellConfigurator</em>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type of the reusable view.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewConfigurator</em>
                                 </code>
                               </td>
                               <td>
@@ -337,7 +403,7 @@ The factory dequeues cells from the collection view with this reuse identifier.<
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A new <code><a href="../Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a></code> instance.</p>
+                        <p>A new <code>CellFactory</code> instance.</p>
 
                       </div>
                     </section>
@@ -348,8 +414,8 @@ The factory dequeues cells from the collection view with this reuse identifier.<
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-04-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-07-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

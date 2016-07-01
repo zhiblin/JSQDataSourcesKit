@@ -31,25 +31,24 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/CollectionViewDataSourceProvider.html">CollectionViewDataSourceProvider</a>
+                <a href="Classes/DataSourceProvider.html">DataSourceProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html">CollectionViewFetchedResultsDataSourceProvider</a>
+                <a href="Classes/FetchedResultsController.html">FetchedResultsController</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a>
+                <a href="Classes/FetchedResultsDelegateProvider.html">FetchedResultsDelegateProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/TableViewDataSourceProvider.html">TableViewDataSourceProvider</a>
+                <a href="Classes/TitledSupplementaryView.html">TitledSupplementaryView</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/TableViewFetchedResultsDataSourceProvider.html">TableViewFetchedResultsDataSourceProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/TableViewFetchedResultsDelegateProvider.html">TableViewFetchedResultsDelegateProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/TitledCollectionReusableView.html">TitledCollectionReusableView</a>
+                <a href="Enums/ReusableViewType.html">ReusableViewType</a>
               </li>
             </ul>
           </li>
@@ -57,19 +56,19 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
+                <a href="Protocols/CellParentViewProtocol.html">CellParentViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a>
+                <a href="Protocols/DataSourceProtocol.html">DataSourceProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/CollectionViewSectionInfo.html">CollectionViewSectionInfo</a>
+                <a href="Protocols/ReusableViewFactoryProtocol.html">ReusableViewFactoryProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/TableViewCellFactoryType.html">TableViewCellFactoryType</a>
+                <a href="Protocols/ReusableViewProtocol.html">ReusableViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/TableViewSectionInfo.html">TableViewSectionInfo</a>
+                <a href="Protocols/SectionInfoProtocol.html">SectionInfoProtocol</a>
               </li>
             </ul>
           </li>
@@ -77,30 +76,16 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
+                <a href="Structs/DataSource.html">DataSource</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a>
+                <a href="Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CollectionViewSection.html">CollectionViewSection</a>
+                <a href="Structs/TitledSupplementaryViewFactory.html">TitledSupplementaryViewFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/TableViewCellFactory.html">TableViewCellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TableViewSection.html">TableViewSection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
+                <a href="Structs/ViewFactory.html">ViewFactory</a>
               </li>
             </ul>
           </li>
@@ -119,9 +104,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C17JSQDataSourcesKit27TableViewDataSourceProvider"></a>
-                    <a name="//apple_ref/swift/Class/TableViewDataSourceProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit27TableViewDataSourceProvider">TableViewDataSourceProvider</a>
+                    <a name="/s:C17JSQDataSourcesKit30FetchedResultsDelegateProvider"></a>
+                    <a name="//apple_ref/swift/Class/FetchedResultsDelegateProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17JSQDataSourcesKit30FetchedResultsDelegateProvider">FetchedResultsDelegateProvider</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -129,70 +114,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>TableViewDataSourceProvider</code> is responsible for providing a data source object for a table view.</p>
+                        <p>A <code>FetchedResultsDelegateProvider</code> is responsible for providing a delegate object for an instance of <code>NSFetchedResultsController</code>.</p>
 
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <strong>Clients are responsbile for the following:</strong>
-
-<ul>
-<li>Registering cells with the table view</li>
-<li>Adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.</li>
-</ul>
-
-</div>
-
-                        <a href="Classes/TableViewDataSourceProvider.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/FetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C17JSQDataSourcesKit41TableViewFetchedResultsDataSourceProvider"></a>
-                    <a name="//apple_ref/swift/Class/TableViewFetchedResultsDataSourceProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit41TableViewFetchedResultsDataSourceProvider">TableViewFetchedResultsDataSourceProvider</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>TableViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object for a table view
-that is backed by an <code>NSFetchedResultsController</code> instance.</p>
-
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
-
-</div>
-
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Clients are responsbile for registering cells with the table view.
-
-</div>
-
-                        <a href="Classes/TableViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FetchedResultsDelegateProvider</span><span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">ReusableViewFactoryProtocol</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -206,9 +136,9 @@ that is backed by an <code>NSFetchedResultsController</code> instance.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C17JSQDataSourcesKit28TitledCollectionReusableView"></a>
-                    <a name="//apple_ref/swift/Class/TitledCollectionReusableView" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit28TitledCollectionReusableView">TitledCollectionReusableView</a>
+                    <a name="/s:C17JSQDataSourcesKit23TitledSupplementaryView"></a>
+                    <a name="//apple_ref/swift/Class/TitledSupplementaryView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17JSQDataSourcesKit23TitledSupplementaryView">TitledSupplementaryView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -216,19 +146,17 @@ that is backed by an <code>NSFetchedResultsController</code> instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code>
-intended for use as an analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
-when using a <code><a href="Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a></code>.</p>
+                        <p>A <code>TitledSupplementaryView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code>.
+It is intended for use as an analog to a <code>UITableView</code> header title.
+These views can be used with <code><a href="Structs/TitledSupplementaryViewFactory.html">TitledSupplementaryViewFactory</a></code>.</p>
 
-<p>These views can be created via a <code><a href="Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a></code>.</p>
-
-                        <a href="Classes/TitledCollectionReusableView.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/TitledSupplementaryView.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TitledCollectionReusableView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TitledSupplementaryView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
 
                         </div>
                       </div>
@@ -242,9 +170,9 @@ when using a <code><a href="Classes/CollectionViewFetchedResultsDelegateProvider
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C17JSQDataSourcesKit32CollectionViewDataSourceProvider"></a>
-                    <a name="//apple_ref/swift/Class/CollectionViewDataSourceProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit32CollectionViewDataSourceProvider">CollectionViewDataSourceProvider</a>
+                    <a name="/s:C17JSQDataSourcesKit18DataSourceProvider"></a>
+                    <a name="//apple_ref/swift/Class/DataSourceProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17JSQDataSourcesKit18DataSourceProvider">DataSourceProvider</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,76 +180,17 @@ when using a <code><a href="Classes/CollectionViewFetchedResultsDelegateProvider
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>CollectionViewDataSourceProvider</code> is responsible for providing a data source object for a collection view.</p>
+                        <p>A <code>DataSourceProvider</code> is responsible for providing a data source object for a table view or collection view.</p>
 
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <strong>Clients are responsbile for the follwing:</strong>
-
-<ul>
-<li>Registering cells with the collection view</li>
-<li>Registering supplementary views with the collection view</li>
-<li>Adding, removing, or reloading cells as the provider&rsquo;s <code>sections</code> are modified</li>
-<li>Adding, removing, or reloading sections as the provider&rsquo;s <code>sections</code> are modified</li>
-</ul>
-
-</div>
-
-                        <a href="Classes/CollectionViewDataSourceProvider.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/DataSourceProvider.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
-    <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C17JSQDataSourcesKit46CollectionViewFetchedResultsDataSourceProvider"></a>
-                    <a name="//apple_ref/swift/Class/CollectionViewFetchedResultsDataSourceProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit46CollectionViewFetchedResultsDataSourceProvider">CollectionViewFetchedResultsDataSourceProvider</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>CollectionViewFetchedResultsDataSourceProvider</code> is responsible for providing a data source object
-for a collection view that is backed by an <code>NSFetchedResultsController</code> instance.</p>
-
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
-
-</div>
-
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Clients are responsbile for registering cells and supplementary views with the collection view.
-
-</div>
-
-                        <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span>
-    <span class="kt">SupplementaryViewFactory</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SupplementaryViewFactory</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DataSourceProvider</span><span class="o">&lt;</span><span class="kt">DataSource</span><span class="p">:</span> <span class="kt">DataSourceProtocol</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">ReusableViewFactoryProtocol</span><span class="p">,</span> <span class="kt">SupplementaryFactory</span><span class="p">:</span> <span class="kt">ReusableViewFactoryProtocol</span>
+    <span class="k">where</span>
+<span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">DataSource</span><span class="o">.</span><span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">DataSource</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -335,9 +204,9 @@ for a collection view that is backed by an <code>NSFetchedResultsController</cod
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvider"></a>
-                    <a name="//apple_ref/swift/Class/CollectionViewFetchedResultsDelegateProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit44CollectionViewFetchedResultsDelegateProvider">CollectionViewFetchedResultsDelegateProvider</a>
+                    <a name="/s:C17JSQDataSourcesKit24FetchedResultsController"></a>
+                    <a name="//apple_ref/swift/Class/FetchedResultsController" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C17JSQDataSourcesKit24FetchedResultsController">FetchedResultsController</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -345,57 +214,15 @@ for a collection view that is backed by an <code>NSFetchedResultsController</cod
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>CollectionViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
-for an instance of <code>NSFetchedResultsController</code> that manages data to display in a collection view.</p>
+                        <p>A generic <code>NSFetchedResultsController</code>.</p>
 
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
-
-</div>
-
-                        <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/FetchedResultsController.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CollectionViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvider"></a>
-                    <a name="//apple_ref/swift/Class/TableViewFetchedResultsDelegateProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvider">TableViewFetchedResultsDelegateProvider</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>TableViewFetchedResultsDelegateProvider</code> is responsible for providing a delegate object
-for an instance of <code>NSFetchedResultsController</code> that manages data to display in a table view.</p>
-
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    The <code>CellFactory.Item</code> type should correspond to the type of objects that the <code>NSFetchedResultsController</code> fetches.
-
-</div>
-
-                        <a href="Classes/TableViewFetchedResultsDelegateProvider.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FetchedResultsController</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">NSManagedObject</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">NSFetchedResultsController</span></code></pre>
 
                         </div>
                       </div>
@@ -407,8 +234,8 @@ for an instance of <code>NSFetchedResultsController</code> that manages data to 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-01-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-07-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

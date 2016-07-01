@@ -1,0 +1,13 @@
+SupplementaryViewFactory.swift
+	public protocol SupplementaryViewFactoryProtocol
+	public protocol SupplementaryViewFactoryProtocol
+DataSourceProvider.swift
+	public final class DataSourceProvider<SectionInfo: SectionInfoProtocol, CellFactory: CellFactoryProtocol
+where CellFactory.Item == SectionInfo.Item>: CustomStringConvertible
+	public var sections: [SectionInfo]
+	public let cellFactory: CellFactory
+	public init(sections: [SectionInfo], cellFactory: CellFactory)
+	public final class DataSourceProvider&lt;SectionInfo : SectionInfoProtocol, CellFactory : CellFactoryProtocol where CellFactory.Item == SectionInfo.Item&gt; : CustomStringConvertible
+	public var tableViewDataSource: UITableViewDataSource
+	public final class DataSourceProvider&lt;SectionInfo : SectionInfoProtocol, CellFactory : CellFactoryProtocol where CellFactory.Item == SectionInfo.Item&gt; : CustomStringConvertible
+	public var collectionViewDataSource: UICollectionViewDataSource

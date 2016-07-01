@@ -31,25 +31,24 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/CollectionViewDataSourceProvider.html">CollectionViewDataSourceProvider</a>
+                <a href="Classes/DataSourceProvider.html">DataSourceProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CollectionViewFetchedResultsDataSourceProvider.html">CollectionViewFetchedResultsDataSourceProvider</a>
+                <a href="Classes/FetchedResultsController.html">FetchedResultsController</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a>
+                <a href="Classes/FetchedResultsDelegateProvider.html">FetchedResultsDelegateProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/TableViewDataSourceProvider.html">TableViewDataSourceProvider</a>
+                <a href="Classes/TitledSupplementaryView.html">TitledSupplementaryView</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/TableViewFetchedResultsDataSourceProvider.html">TableViewFetchedResultsDataSourceProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/TableViewFetchedResultsDelegateProvider.html">TableViewFetchedResultsDelegateProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/TitledCollectionReusableView.html">TitledCollectionReusableView</a>
+                <a href="Enums/ReusableViewType.html">ReusableViewType</a>
               </li>
             </ul>
           </li>
@@ -57,19 +56,19 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
+                <a href="Protocols/CellParentViewProtocol.html">CellParentViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a>
+                <a href="Protocols/DataSourceProtocol.html">DataSourceProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/CollectionViewSectionInfo.html">CollectionViewSectionInfo</a>
+                <a href="Protocols/ReusableViewFactoryProtocol.html">ReusableViewFactoryProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/TableViewCellFactoryType.html">TableViewCellFactoryType</a>
+                <a href="Protocols/ReusableViewProtocol.html">ReusableViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/TableViewSectionInfo.html">TableViewSectionInfo</a>
+                <a href="Protocols/SectionInfoProtocol.html">SectionInfoProtocol</a>
               </li>
             </ul>
           </li>
@@ -77,30 +76,16 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
+                <a href="Structs/DataSource.html">DataSource</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a>
+                <a href="Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CollectionViewSection.html">CollectionViewSection</a>
+                <a href="Structs/TitledSupplementaryViewFactory.html">TitledSupplementaryViewFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/TableViewCellFactory.html">TableViewCellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TableViewSection.html">TableViewSection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
+                <a href="Structs/ViewFactory.html">ViewFactory</a>
               </li>
             </ul>
           </li>
@@ -115,13 +100,20 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ReusableViewFactory"></a>
+                <a name="//apple_ref/swift/Section/ReusableViewFactory" class="dashAnchor"></a>
+                <a href="#/ReusableViewFactory">
+                  <h3 class="section-name">ReusableViewFactory</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V17JSQDataSourcesKit34CollectionSupplementaryViewFactory"></a>
-                    <a name="//apple_ref/swift/Struct/CollectionSupplementaryViewFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit34CollectionSupplementaryViewFactory">CollectionSupplementaryViewFactory</a>
+                    <a name="/s:V17JSQDataSourcesKit11ViewFactory"></a>
+                    <a name="//apple_ref/swift/Struct/ViewFactory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V17JSQDataSourcesKit11ViewFactory">ViewFactory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -129,16 +121,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>CollectionSupplementaryViewFactory</code> is a concrete <code><a href="Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a></code>.
-This factory is responsible for producing and configuring supplementary views for a collection view for a specific item.</p>
+                        <p>A <code>ViewFactory</code> is a concrete <code><a href="Protocols/ReusableViewFactoryProtocol.html">ReusableViewFactoryProtocol</a></code> type.
+This factory is responsible for producing and configuring reusable views for a specific item.
+Cells can be for either collection views or table views.</p>
 
-                        <a href="Structs/CollectionSupplementaryViewFactory.html" class="slightly-smaller">See more</a>
+                        <a href="Structs/ViewFactory.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionSupplementaryViewFactory</span> <span class="o">&lt;</span><span class="kt">SupplementaryView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ViewFactory</span><span class="o">&lt;</span><span class="kt">Item</span><span class="p">,</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">ReusableViewProtocol</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ReusableViewFactoryProtocol</span></code></pre>
 
                         </div>
                       </div>
@@ -152,9 +145,9 @@ This factory is responsible for producing and configuring supplementary views fo
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V17JSQDataSourcesKit16TableViewSection"></a>
-                    <a name="//apple_ref/swift/Struct/TableViewSection" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit16TableViewSection">TableViewSection</a>
+                    <a name="/s:V17JSQDataSourcesKit7Section"></a>
+                    <a name="//apple_ref/swift/Struct/Section" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V17JSQDataSourcesKit7Section">Section</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,16 +155,16 @@ This factory is responsible for producing and configuring supplementary views fo
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>TableViewSection</code> is a concrete <code><a href="Protocols/TableViewSectionInfo.html">TableViewSectionInfo</a></code>.
+                        <p>A <code>Section</code> is a concrete <code><a href="Protocols/SectionInfoProtocol.html">SectionInfoProtocol</a></code> type.
 A section instance is responsible for managing the elements in a section.</p>
 
-                        <a href="Structs/TableViewSection.html" class="slightly-smaller">See more</a>
+                        <a href="Structs/Section.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewSection</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Section</span><span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">SectionInfoProtocol</span></code></pre>
 
                         </div>
                       </div>
@@ -185,9 +178,9 @@ A section instance is responsible for managing the elements in a section.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V17JSQDataSourcesKit25CollectionViewCellFactory"></a>
-                    <a name="//apple_ref/swift/Struct/CollectionViewCellFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit25CollectionViewCellFactory">CollectionViewCellFactory</a>
+                    <a name="/s:V17JSQDataSourcesKit10DataSource"></a>
+                    <a name="//apple_ref/swift/Struct/DataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V17JSQDataSourcesKit10DataSource">DataSource</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -195,16 +188,16 @@ A section instance is responsible for managing the elements in a section.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>CollectionViewCellFactory</code> is a concrete <code><a href="Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a></code>.
-This factory is responsible for producing and configuring collection view cells for a specific item.</p>
+                        <p>A instance of <code>DataSource</code> is a concrete <code><a href="Protocols/DataSourceProtocol.html">DataSourceProtocol</a></code>.
+It is a collection of section-based data.</p>
 
-                        <a href="Structs/CollectionViewCellFactory.html" class="slightly-smaller">See more</a>
+                        <a href="Structs/DataSource.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewCellFactoryType</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">SectionInfoProtocol</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">DataSourceProtocol</span></code></pre>
 
                         </div>
                       </div>
@@ -218,9 +211,9 @@ This factory is responsible for producing and configuring collection view cells 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V17JSQDataSourcesKit35TitledCollectionReusableViewFactory"></a>
-                    <a name="//apple_ref/swift/Struct/TitledCollectionReusableViewFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit35TitledCollectionReusableViewFactory">TitledCollectionReusableViewFactory</a>
+                    <a name="/s:V17JSQDataSourcesKit30TitledSupplementaryViewFactory"></a>
+                    <a name="//apple_ref/swift/Struct/TitledSupplementaryViewFactory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V17JSQDataSourcesKit30TitledSupplementaryViewFactory">TitledSupplementaryViewFactory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -228,84 +221,17 @@ This factory is responsible for producing and configuring collection view cells 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>TitledCollectionReusableViewFactory</code> is a specialized supplementary view factory
-that conforms to <code><a href="Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a></code>.</p>
+                        <p>A <code>TitledSupplementaryViewFactory</code> is a specialized supplementary view factory that conforms to <code><a href="Protocols/ReusableViewFactoryProtocol.html">ReusableViewFactoryProtocol</a></code>.</p>
 
-<p>This factory is responsible for producing and configuring <code><a href="Classes/TitledCollectionReusableView.html">TitledCollectionReusableView</a></code> instances.</p>
+<p>This factory is responsible for producing and configuring <code><a href="Classes/TitledSupplementaryView.html">TitledSupplementaryView</a></code> instances.</p>
 
-                        <a href="Structs/TitledCollectionReusableViewFactory.html" class="slightly-smaller">See more</a>
+                        <a href="Structs/TitledSupplementaryViewFactory.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TitledCollectionReusableViewFactory</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionSupplementaryViewFactoryType</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V17JSQDataSourcesKit20TableViewCellFactory"></a>
-                    <a name="//apple_ref/swift/Struct/TableViewCellFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit20TableViewCellFactory">TableViewCellFactory</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>TableViewCellFactory</code> is a concrete <code><a href="Protocols/TableViewCellFactoryType.html">TableViewCellFactoryType</a></code>.
-This factory is responsible for producing and configuring table view cells for a specific item.</p>
-
-                        <a href="Structs/TableViewCellFactory.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TableViewCellFactory</span> <span class="o">&lt;</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V17JSQDataSourcesKit21CollectionViewSection"></a>
-                    <a name="//apple_ref/swift/Struct/CollectionViewSection" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V17JSQDataSourcesKit21CollectionViewSection">CollectionViewSection</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>CollectionViewSection</code> is a concrete <code><a href="Protocols/CollectionViewSectionInfo.html">CollectionViewSectionInfo</a></code>.
-A section instance is responsible for managing the elements in a section.</p>
-
-                        <a href="Structs/CollectionViewSection.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectionViewSection</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CollectionViewSectionInfo</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TitledSupplementaryViewFactory</span> <span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ReusableViewFactoryProtocol</span></code></pre>
 
                         </div>
                       </div>
@@ -317,8 +243,8 @@ A section instance is responsible for managing the elements in a section.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-01-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-07-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

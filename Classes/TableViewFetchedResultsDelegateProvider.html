@@ -14,7 +14,7 @@
     <a title="TableViewFetchedResultsDelegateProvider Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">JSQDataSourcesKit Docs</a> (100% documented)</p>
+        <p><a href="../index.html">JSQDataSourcesKit Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/jessesquires/JSQDataSourcesKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -41,6 +41,9 @@
                 <a href="../Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/DataSourceProvider.html">DataSourceProvider</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/TableViewDataSourceProvider.html">TableViewDataSourceProvider</a>
               </li>
               <li class="nav-group-task">
@@ -58,19 +61,19 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
+                <a href="../Protocols/CellFactoryProtocol.html">CellFactoryProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a>
+                <a href="../Protocols/CellParentViewProtocol.html">CellParentViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewSectionInfo.html">CollectionViewSectionInfo</a>
+                <a href="../Protocols/ReusableViewProtocol.html">ReusableViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TableViewCellFactoryType.html">TableViewCellFactoryType</a>
+                <a href="../Protocols/SectionInfoProtocol.html">SectionInfoProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TableViewSectionInfo.html">TableViewSectionInfo</a>
+                <a href="../Protocols/SupplementaryViewFactoryProtocol.html">SupplementaryViewFactoryProtocol</a>
               </li>
             </ul>
           </li>
@@ -78,30 +81,16 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
+                <a href="../Structs/CellFactory.html">CellFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a>
+                <a href="../Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CollectionViewSection.html">CollectionViewSection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TableViewCellFactory.html">TableViewCellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TableViewSection.html">TableViewSection</a>
+                <a href="../Structs/SupplementaryViewFactory.html">SupplementaryViewFactory</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
               </li>
             </ul>
           </li>
@@ -113,7 +102,7 @@
             <h1>TableViewFetchedResultsDelegateProvider</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewFetchedResultsDelegateProvider</span> <span class="o">&lt;</span><span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CellFactoryProtocol</span> <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                 </div>
               </div>
@@ -206,9 +195,9 @@ for which this provider provides a delegate.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvider11cellFactoryq_"></a>
+                    <a name="/s:vC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvider11cellFactoryx"></a>
                     <a name="//apple_ref/swift/Property/cellFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvider11cellFactoryq_">cellFactory</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvider11cellFactoryx">cellFactory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,9 +260,9 @@ for which this provider provides a delegate.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvidercuRq_S_24TableViewCellFactoryType_FMGS0_q__FT9tableViewCSo11UITableView11cellFactoryq_24fetchedResultsControllerCSo26NSFetchedResultsController_GS0_q__"></a>
+                    <a name="/s:FC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvidercFT9tableViewCSo11UITableView11cellFactoryx24fetchedResultsControllerCSo26NSFetchedResultsController_GS0_x_"></a>
                     <a name="//apple_ref/swift/Method/init(tableView:cellFactory:fetchedResultsController:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvidercuRq_S_24TableViewCellFactoryType_FMGS0_q__FT9tableViewCSo11UITableView11cellFactoryq_24fetchedResultsControllerCSo26NSFetchedResultsController_GS0_q__">init(tableView:cellFactory:fetchedResultsController:)</a>
+                    <a class="token" href="#/s:FC17JSQDataSourcesKit39TableViewFetchedResultsDelegateProvidercFT9tableViewCSo11UITableView11cellFactoryx24fetchedResultsControllerCSo26NSFetchedResultsController_GS0_x_">init(tableView:cellFactory:fetchedResultsController:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -351,7 +340,7 @@ for which this provider provides a delegate.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-01-14)</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-04-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

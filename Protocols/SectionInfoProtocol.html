@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TitledCollectionReusableView Class Reference</title>
+    <title>SectionInfoProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/TitledCollectionReusableView" class="dashAnchor"></a>
-    <a title="TitledCollectionReusableView Class Reference"></a>
+    <a name="//apple_ref/swift/Protocol/SectionInfoProtocol" class="dashAnchor"></a>
+    <a title="SectionInfoProtocol Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">JSQDataSourcesKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">JSQDataSourcesKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        TitledCollectionReusableView Class Reference
+        SectionInfoProtocol Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -41,7 +41,7 @@
                 <a href="../Classes/FetchedResultsDelegateProvider.html">FetchedResultsDelegateProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TitledCollectionReusableView.html">TitledCollectionReusableView</a>
+                <a href="../Classes/TitledSupplementaryView.html">TitledSupplementaryView</a>
               </li>
             </ul>
           </li>
@@ -83,7 +83,7 @@
                 <a href="../Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
+                <a href="../Structs/TitledSupplementaryViewFactory.html">TitledSupplementaryViewFactory</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ViewFactory.html">ViewFactory</a>
@@ -95,21 +95,55 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>TitledCollectionReusableView</h1>
+            <h1>SectionInfoProtocol</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TitledCollectionReusableView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SectionInfoProtocol</span></code></pre>
 
                 </div>
               </div>
-            <p>A <code>TitledCollectionReusableView</code> is a <code>UICollectionReusableView</code> subclass with a single <code>UILabel</code>
-intended for use as an analog to a <code>UITableView</code> header title (via <code>tableView(_:titleForHeaderInSection:)</code>)
-when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
-
-<p>These views can be created via a <code><a href="../Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a></code>.</p>
+            <p>An instance conforming to <code>SectionInfoProtocol</code> represents a section of items.</p>
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Associated%20types"></a>
+                <a name="//apple_ref/swift/Section/Associated types" class="dashAnchor"></a>
+                <a href="#/Associated%20types">
+                  <h3 class="section-name">Associated types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P17JSQDataSourcesKit19SectionInfoProtocol4Item"></a>
+                    <a name="//apple_ref/swift/Alias/Item" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P17JSQDataSourcesKit19SectionInfoProtocol4Item">Item</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of elements stored in the section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">as</span><span class="n">sociatedtype</span> <span class="kt">Item</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Properties"></a>
@@ -122,9 +156,9 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView5labelCSo7UILabel"></a>
-                    <a name="//apple_ref/swift/Property/label" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView5labelCSo7UILabel">label</a>
+                    <a name="/s:vP17JSQDataSourcesKit19SectionInfoProtocol5itemsGSawx4Item_"></a>
+                    <a name="//apple_ref/swift/Property/items" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP17JSQDataSourcesKit19SectionInfoProtocol5itemsGSawx4Item_">items</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -132,14 +166,14 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The label of the reusable view.</p>
+                        <p>The elements in the section.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">UILabel</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">Item</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -149,9 +183,9 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView13verticalInsetV12CoreGraphics7CGFloat"></a>
-                    <a name="//apple_ref/swift/Property/verticalInset" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView13verticalInsetV12CoreGraphics7CGFloat">verticalInset</a>
+                    <a name="/s:vP17JSQDataSourcesKit19SectionInfoProtocol11headerTitleGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/headerTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP17JSQDataSourcesKit19SectionInfoProtocol11headerTitleGSqSS_">headerTitle</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -159,14 +193,14 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The vertical layout insets for the label. The default value is 8.</p>
+                        <p>The header title for the section.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">verticalInset</span> <span class="o">=</span> <span class="kt">CGFloat</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">headerTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -176,9 +210,9 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit28TitledCollectionReusableView15horizontalInsetV12CoreGraphics7CGFloat"></a>
-                    <a name="//apple_ref/swift/Property/horizontalInset" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit28TitledCollectionReusableView15horizontalInsetV12CoreGraphics7CGFloat">horizontalInset</a>
+                    <a name="/s:vP17JSQDataSourcesKit19SectionInfoProtocol11footerTitleGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/footerTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP17JSQDataSourcesKit19SectionInfoProtocol11footerTitleGSqSS_">footerTitle</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,52 +220,14 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The horizontal layout insets for the label. The default value is 8.</p>
+                        <p>The footer title for the section.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">horizontalInset</span> <span class="o">=</span> <span class="kt">CGFloat</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Class%20properties"></a>
-                <a name="//apple_ref/swift/Section/Class properties" class="dashAnchor"></a>
-                <a href="#/Class%20properties">
-                  <h3 class="section-name">Class properties</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:ZvC17JSQDataSourcesKit28TitledCollectionReusableView10identifierSS"></a>
-                    <a name="//apple_ref/swift/Variable/identifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvC17JSQDataSourcesKit28TitledCollectionReusableView10identifierSS">identifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The default string used to identify instances of <code><a href="../Classes/TitledCollectionReusableView.html">TitledCollectionReusableView</a></code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">footerTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -243,7 +239,7 @@ when using a <code>CollectionViewFetchedResultsDelegateProvider</code>.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-06-26)</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-07-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

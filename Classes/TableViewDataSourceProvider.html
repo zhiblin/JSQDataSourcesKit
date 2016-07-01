@@ -14,7 +14,7 @@
     <a title="TableViewDataSourceProvider Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">JSQDataSourcesKit Docs</a> (100% documented)</p>
+        <p><a href="../index.html">JSQDataSourcesKit Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/jessesquires/JSQDataSourcesKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -41,6 +41,9 @@
                 <a href="../Classes/CollectionViewFetchedResultsDelegateProvider.html">CollectionViewFetchedResultsDelegateProvider</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/DataSourceProvider.html">DataSourceProvider</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/TableViewDataSourceProvider.html">TableViewDataSourceProvider</a>
               </li>
               <li class="nav-group-task">
@@ -58,19 +61,19 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
+                <a href="../Protocols/CellFactoryProtocol.html">CellFactoryProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a>
+                <a href="../Protocols/CellParentViewProtocol.html">CellParentViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewSectionInfo.html">CollectionViewSectionInfo</a>
+                <a href="../Protocols/ReusableViewProtocol.html">ReusableViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TableViewCellFactoryType.html">TableViewCellFactoryType</a>
+                <a href="../Protocols/SectionInfoProtocol.html">SectionInfoProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TableViewSectionInfo.html">TableViewSectionInfo</a>
+                <a href="../Protocols/SupplementaryViewFactoryProtocol.html">SupplementaryViewFactoryProtocol</a>
               </li>
             </ul>
           </li>
@@ -78,30 +81,16 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
+                <a href="../Structs/CellFactory.html">CellFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a>
+                <a href="../Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CollectionViewSection.html">CollectionViewSection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TableViewCellFactory.html">TableViewCellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TableViewSection.html">TableViewSection</a>
+                <a href="../Structs/SupplementaryViewFactory.html">SupplementaryViewFactory</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:17JSQDataSourcesKit21SupplementaryViewKind">SupplementaryViewKind</a>
               </li>
             </ul>
           </li>
@@ -113,10 +102,8 @@
             <h1>TableViewDataSourceProvider</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span> <span class="o">&lt;</span>
-    <span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">TableViewSectionInfo</span><span class="p">,</span>
-    <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">TableViewCellFactoryType</span>
-    <span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TableViewDataSourceProvider</span><span class="o">&lt;</span><span class="kt">SectionInfo</span><span class="p">:</span> <span class="kt">SectionInfoProtocol</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="p">:</span> <span class="kt">CellFactoryProtocol</span>
+<span class="k">where</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Item</span> <span class="o">==</span> <span class="kt">SectionInfo</span><span class="o">.</span><span class="kt">Item</span><span class="p">,</span> <span class="kt">CellFactory</span><span class="o">.</span><span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                 </div>
               </div>
@@ -126,12 +113,10 @@
     <p class="aside-title">Warning</p>
     <strong>Clients are responsbile for the following:</strong>
 
-<ul>
-<li>Registering cells with the table view</li>
-<li>Adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.</li>
-</ul>
-
 </div>
+
+<p><li>Registering cells with the table view</li>
+<li>Adding, removing, or reloading cells and sections as the provider&rsquo;s <code>sections</code> are modified.</li></p>
 
           </section>
           <section class="section task-group-section">
@@ -174,60 +159,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:sC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFCSo11NSIndexPathqq_S_20TableViewSectionInfo4Item"></a>
+                    <a name="/s:iC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFSix"></a>
                     <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:sC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFCSo11NSIndexPathqq_S_20TableViewSectionInfo4Item">subscript(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span> <span class="p">(</span><span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Item</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>indexPath</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The index path of the item to return.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The item at <code>indexPath</code>.</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:sC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFSiq_"></a>
-                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:sC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFSiq_">subscript(_:)</a>
+                    <a class="token" href="#/s:iC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFSix">subscript(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -273,6 +207,57 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:iC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFCSo11NSIndexPathwx4Item"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:iC17JSQDataSourcesKit27TableViewDataSourceProvider9subscriptFCSo11NSIndexPathwx4Item">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span> <span class="p">(</span><span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Item</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path of the item to return.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The item at <code>indexPath</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -287,9 +272,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider8sectionsGSaq__"></a>
+                    <a name="/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider8sectionsGSax_"></a>
                     <a name="//apple_ref/swift/Property/sections" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider8sectionsGSaq__">sections</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider8sectionsGSax_">sections</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -314,9 +299,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider11cellFactoryq0_"></a>
+                    <a name="/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider11cellFactoryq_"></a>
                     <a name="//apple_ref/swift/Property/cellFactory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider11cellFactoryq0_">cellFactory</a>
+                    <a class="token" href="#/s:vC17JSQDataSourcesKit27TableViewDataSourceProvider11cellFactoryq_">cellFactory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -379,9 +364,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC17JSQDataSourcesKit27TableViewDataSourceProvidercu0_Rq_S_20TableViewSectionInfoq0_S_24TableViewCellFactoryTypezqq_S1_4Itemqq0_S2_4Item_FMGS0_q_q0__FT8sectionsGSaq__11cellFactoryq0_9tableViewGSqCSo11UITableView__GS0_q_q0__"></a>
+                    <a name="/s:FC17JSQDataSourcesKit27TableViewDataSourceProvidercFT8sectionsGSax_11cellFactoryq_9tableViewGSqCSo11UITableView__GS0_xq__"></a>
                     <a name="//apple_ref/swift/Method/init(sections:cellFactory:tableView:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC17JSQDataSourcesKit27TableViewDataSourceProvidercu0_Rq_S_20TableViewSectionInfoq0_S_24TableViewCellFactoryTypezqq_S1_4Itemqq0_S2_4Item_FMGS0_q_q0__FT8sectionsGSaq__11cellFactoryq0_9tableViewGSqCSo11UITableView__GS0_q_q0__">init(sections:cellFactory:tableView:)</a>
+                    <a class="token" href="#/s:FC17JSQDataSourcesKit27TableViewDataSourceProvidercFT8sectionsGSax_11cellFactoryq_9tableViewGSqCSo11UITableView__GS0_xq__">init(sections:cellFactory:tableView:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -459,7 +444,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-01-14)</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-04-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

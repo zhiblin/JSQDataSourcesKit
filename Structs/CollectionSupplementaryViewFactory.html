@@ -58,19 +58,19 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/CellFactoryProtocol.html">CellFactoryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CellParentViewProtocol.html">CellParentViewProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/CollectionSupplementaryViewFactoryType.html">CollectionSupplementaryViewFactoryType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewCellFactoryType.html">CollectionViewCellFactoryType</a>
+                <a href="../Protocols/ReusableViewProtocol.html">ReusableViewProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/CollectionViewSectionInfo.html">CollectionViewSectionInfo</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TableViewCellFactoryType.html">TableViewCellFactoryType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TableViewSectionInfo.html">TableViewSectionInfo</a>
+                <a href="../Protocols/SectionInfoProtocol.html">SectionInfoProtocol</a>
               </li>
             </ul>
           </li>
@@ -78,19 +78,13 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/CellFactory.html">CellFactory</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/CollectionSupplementaryViewFactory.html">CollectionSupplementaryViewFactory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CollectionViewCellFactory.html">CollectionViewCellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CollectionViewSection.html">CollectionViewSection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TableViewCellFactory.html">TableViewCellFactory</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/TableViewSection.html">TableViewSection</a>
+                <a href="../Structs/Section.html">Section</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TitledCollectionReusableViewFactory.html">TitledCollectionReusableViewFactory</a>
@@ -151,7 +145,7 @@ This factory is responsible for producing and configuring supplementary views fo
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">SupplementaryView</span><span class="p">,</span> <span class="kt">Item</span><span class="p">,</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigurationHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">SupplementaryView</span><span class="p">,</span> <span class="kt">Item</span><span class="p">?,</span> <span class="kt">SupplementaryViewKind</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SupplementaryView</span></code></pre>
 
                         </div>
                       </div>
@@ -180,7 +174,7 @@ This factory is responsible for producing and configuring supplementary views fo
                               </td>
                               <td>
                                 <div>
-                                  <p>The item at the index path.</p>
+                                  <p>The item at the index path, or <code>nil</code>.</p>
 
                                 </div>
                               </td>
@@ -294,9 +288,9 @@ The factory dequeues supplementary views from the collection view with this reus
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycu0_Rdq_CSo24UICollectionReusableView_FMGS0_q_q0__FT15reuseIdentifierSS29supplementaryViewConfiguratorFTq_q0_SSCSo16UICollectionViewCSo11NSIndexPath_q__GS0_q_q0__"></a>
+                    <a name="/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycFT15reuseIdentifierSS29supplementaryViewConfiguratorFTxGSqq__SSCSo16UICollectionViewCSo11NSIndexPath_x_GS0_xq__"></a>
                     <a name="//apple_ref/swift/Method/init(reuseIdentifier:supplementaryViewConfigurator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycu0_Rdq_CSo24UICollectionReusableView_FMGS0_q_q0__FT15reuseIdentifierSS29supplementaryViewConfiguratorFTq_q0_SSCSo16UICollectionViewCSo11NSIndexPath_q__GS0_q_q0__">init(reuseIdentifier:supplementaryViewConfigurator:)</a>
+                    <a class="token" href="#/s:FV17JSQDataSourcesKit34CollectionSupplementaryViewFactorycFT15reuseIdentifierSS29supplementaryViewConfiguratorFTxGSqq__SSCSo16UICollectionViewCSo11NSIndexPath_x_GS0_xq__">init(reuseIdentifier:supplementaryViewConfigurator:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -361,7 +355,7 @@ The factory dequeues supplementary views from the collection view with this reus
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-01-14)</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-04-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
