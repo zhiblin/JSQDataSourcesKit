@@ -23,9 +23,9 @@ import JSQDataSourcesKit
 
 final class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    typealias Source = DataSource< Section<CellViewModel> >
-    typealias CollectionCellFactory = ViewFactory<CellViewModel, CollectionViewCell>
-    typealias HeaderViewFactory = TitledSupplementaryViewFactory<CellViewModel>
+    typealias Source = DataSource< Section<Any> >
+    typealias CollectionCellFactory = ViewFactory<Any, CollectionViewCell>
+    typealias HeaderViewFactory = TitledSupplementaryViewFactory<Any>
 
     var dataSourceProvider: DataSourceProvider<Source, CollectionCellFactory, HeaderViewFactory>?
 
@@ -34,20 +34,20 @@ final class CollectionViewController: UICollectionViewController, UICollectionVi
         configureCollectionView(collectionView!)
 
         // 1. create view models
-        let section0 = Section(items: CellViewModel(), CellViewModel(), CellViewModel())
-        let section1 = Section(items: CellViewModel(), CellViewModel(), CellViewModel(), CellViewModel(), CellViewModel(), CellViewModel())
-        let section2 = Section(items: CellViewModel())
+        let section0 = Section<Any>(items: CellViewModel(), CellViewModel(), CellViewModel())
+        let section1 = Section<Any>(items: CellViewModel(), CellViewModel(), CellViewModel(), CellViewModel(), CellViewModel(), CellViewModel())
+        let section2 = Section<Any>(items: CellViewModel())
         let dataSource = DataSource(sections: section0, section1, section2)
 
         // 2. create cell factory
-        let cellFactory = ViewFactory(reuseIdentifier: CellId) { (cell, model: CellViewModel?, type, collectionView, indexPath) -> CollectionViewCell in
-            cell.label.text = model!.text + "\n\(indexPath.section), \(indexPath.item)"
+        let cellFactory = ViewFactory(reuseIdentifier: CellId) { (cell, model: Any?, type, collectionView, indexPath) -> CollectionViewCell in
+            cell.label.text = (model as? CellViewModel)!.text + "\n\(indexPath.section), \(indexPath.item)"
             cell.accessibilityIdentifier = "\(indexPath.section), \(indexPath.item)"
             return cell
         }
 
         // 3. create supplementary view factory
-        let headerFactory = TitledSupplementaryViewFactory { (header, item: CellViewModel?, kind, collectionView, indexPath) -> TitledSupplementaryView in
+        let headerFactory = TitledSupplementaryViewFactory { (header, item: Any?, kind, collectionView, indexPath) -> TitledSupplementaryView in
             header.label.text = "Section \(indexPath.section)"
             header.backgroundColor = .darkGray()
             header.label.textColor = .white()
